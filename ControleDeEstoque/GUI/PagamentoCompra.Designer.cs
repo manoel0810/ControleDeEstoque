@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmPagamentoCompra
+    partial class PagamentoCompra
     {
         /// <summary>
         /// Required designer variable.
@@ -53,7 +53,7 @@
             this.btLocalizar.TabIndex = 0;
             this.btLocalizar.Text = "Localizar Compra";
             this.btLocalizar.UseVisualStyleBackColor = true;
-            this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click);
+            this.btLocalizar.Click += new System.EventHandler(this.BtLocalizar_Click);
             // 
             // label1
             // 
@@ -118,7 +118,7 @@
             this.dgvParcelas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvParcelas.Size = new System.Drawing.Size(737, 348);
             this.dgvParcelas.TabIndex = 9;
-            this.dgvParcelas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParcelas_CellClick);
+            this.dgvParcelas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvParcelas_CellClick);
             // 
             // btPagar
             // 
@@ -129,7 +129,7 @@
             this.btPagar.TabIndex = 10;
             this.btPagar.Text = "Pagar Parcela";
             this.btPagar.UseVisualStyleBackColor = true;
-            this.btPagar.Click += new System.EventHandler(this.btPagar_Click);
+            this.btPagar.Click += new System.EventHandler(this.BtPagar_Click);
             // 
             // label3
             // 

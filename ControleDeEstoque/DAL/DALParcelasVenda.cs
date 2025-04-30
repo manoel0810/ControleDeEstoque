@@ -112,7 +112,7 @@ namespace DAL
         public DataTable Localizar(int vencod)
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from parcelasvenda where ven_cod =" +
+            SqlDataAdapter da = new SqlDataAdapter("Select pve_cod, pve_valor, pve_datapagto, pve_datavecto from parcelasvenda where ven_cod =" +
                 vencod.ToString(), conexao.StringConexao);
 
             da.Fill(tabela);
