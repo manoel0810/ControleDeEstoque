@@ -182,11 +182,11 @@
     <Compile Include="frmMovimentacaoVenda.Designer.cs">
       <DependentUpon>frmMovimentacaoVenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPagamentoCompra.cs">
+    <Compile Include="PagamentoCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPagamentoCompra.Designer.cs">
-      <DependentUpon>frmPagamentoCompra.cs</DependentUpon>
+    <Compile Include="PagamentoCompra.Designer.cs">
+      <DependentUpon>PagamentoCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -194,11 +194,11 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRecebimentoVenda.cs">
+    <Compile Include="RecebimentoVenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRecebimentoVenda.Designer.cs">
-      <DependentUpon>frmRecebimentoVenda.cs</DependentUpon>
+    <Compile Include="RecebimentoVenda.Designer.cs">
+      <DependentUpon>RecebimentoVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSobre.cs">
       <SubType>Form</SubType>
@@ -271,14 +271,14 @@
     <EmbeddedResource Include="frmMovimentacaoVenda.resx">
       <DependentUpon>frmMovimentacaoVenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPagamentoCompra.resx">
-      <DependentUpon>frmPagamentoCompra.cs</DependentUpon>
+    <EmbeddedResource Include="PagamentoCompra.resx">
+      <DependentUpon>PagamentoCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRecebimentoVenda.resx">
-      <DependentUpon>frmRecebimentoVenda.cs</DependentUpon>
+    <EmbeddedResource Include="RecebimentoVenda.resx">
+      <DependentUpon>RecebimentoVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSobre.resx">
       <DependentUpon>frmSobre.cs</DependentUpon>

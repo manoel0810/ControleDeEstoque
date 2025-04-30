@@ -197,7 +197,7 @@ namespace GUI
 
         private void pagamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPagamentoCompra f = new frmPagamentoCompra();
+            PagamentoCompra f = new PagamentoCompra();
             f.ShowDialog();
             f.Dispose();
         }
@@ -218,7 +218,7 @@ namespace GUI
 
         private void recebimentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRecebimentoVenda f = new frmRecebimentoVenda();
+            RecebimentoVenda f = new RecebimentoVenda();
             f.ShowDialog();
             f.Dispose();
         }

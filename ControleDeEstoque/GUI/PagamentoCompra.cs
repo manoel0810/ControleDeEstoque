@@ -6,39 +6,21 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmPagamentoCompra : Form
+    public partial class PagamentoCompra : Form
     {
         public int pcoCod = 0;
-        public frmPagamentoCompra()
+
+        public PagamentoCompra()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btLocalizar_Click(object sender, EventArgs e)
+        private void BtLocalizar_Click(object sender, EventArgs e)
         {
             frmConsultaCompra f = new frmConsultaCompra();
             f.ShowDialog();
             btPagar.Enabled = false;
+
             if (f.codigo != 0)
             {
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
@@ -58,20 +40,20 @@ namespace GUI
                 dgvParcelas.Columns[1].HeaderText = "Valor da parcela";
                 dgvParcelas.Columns[2].HeaderText = "Pago em";
                 dgvParcelas.Columns[3].HeaderText = "Vencimento";
+
                 //dgvDados.Columns[0].Width = 50;
                 dgvParcelas.Columns[4].Visible = false;
             }
         }
 
-        private void btPagar_Click(object sender, EventArgs e)
+        private void BtPagar_Click(object sender, EventArgs e)
         {
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
             BLLParcelasCompra bllp = new BLLParcelasCompra(cx);
             int comCod = Convert.ToInt32(txtCodigo.Text);
             DateTime data = dtpPagto.Value;
-            bllp.EfetuaPagamentoParcela(comCod, this.pcoCod, data);
+            bllp.EfetuaPagamentoParcela(comCod, pcoCod, data);
 
-            BLLParcelasCompra bll2p = new BLLParcelasCompra(cx);
             dgvParcelas.DataSource = bllp.Localizar(comCod);
             btPagar.Enabled = false;
 
@@ -79,18 +61,20 @@ namespace GUI
             dgvParcelas.Columns[1].HeaderText = "Valor da parcela";
             dgvParcelas.Columns[2].HeaderText = "Pago em";
             dgvParcelas.Columns[3].HeaderText = "Vencimento";
+
             //dgvDados.Columns[0].Width = 50;
             dgvParcelas.Columns[4].Visible = false;
         }
 
-        private void dgvParcelas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvParcelas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btPagar.Enabled = false;
-            this.pcoCod = 0;
+            pcoCod = 0;
+
             if (e.RowIndex >= 0 && dgvParcelas.Rows[e.RowIndex].Cells[2].Value.ToString() == "")
             {
                 btPagar.Enabled = true;
-                this.pcoCod = Convert.ToInt32(dgvParcelas.Rows[e.RowIndex].Cells[0].Value);
+                pcoCod = Convert.ToInt32(dgvParcelas.Rows[e.RowIndex].Cells[0].Value);
             }
         }
     }
