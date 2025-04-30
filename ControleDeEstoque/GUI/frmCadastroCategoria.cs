@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using Modelo;
+﻿using BLL;
 using DAL;
-using BLL;
+using Modelo;
+using System;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -53,7 +48,7 @@ namespace GUI
                 {
                     //cadastrar uma categoria
                     bll.Incluir(modelo);
-                    MessageBox.Show("Cadastro efetuado: Código "+modelo.CatCod.ToString());
+                    MessageBox.Show("Cadastro efetuado: Código " + modelo.CatCod.ToString());
 
                 }
                 else
@@ -66,7 +61,7 @@ namespace GUI
                 this.LimpaTela();
                 this.alteraBotoes(1);
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 MessageBox.Show(erro.Message);
             }

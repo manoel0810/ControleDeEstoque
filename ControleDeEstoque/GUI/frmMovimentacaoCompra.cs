@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+﻿using BLL;
 using DAL;
-using BLL;
 using Modelo;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -304,8 +299,8 @@ namespace GUI
                 ModeloProduto modelo = bll.CarregaModeloProduto(Convert.ToInt32(txtProCod.Text));
                 lProduto.Text = modelo.ProNome;
                 txtQtde.Text = " 1";
-                txtValor.Text = Convert.ToString((Decimal) modelo.ProValorVenda);
-         
+                txtValor.Text = Convert.ToString((Decimal)modelo.ProValorVenda);
+
             }
             catch
             {
@@ -493,7 +488,7 @@ namespace GUI
 
         private void txtValor_TextChanged(object sender, EventArgs e)
         {
-           // Moeda(ref txtValor);
+            // Moeda(ref txtValor);
         }
         public static void Moeda(ref TextBox txt)
         {
@@ -517,5 +512,5 @@ namespace GUI
             }
         }
     }
-    }
+}
 

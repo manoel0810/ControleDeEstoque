@@ -2,20 +2,13 @@
 using DAL;
 using Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
 {
     public partial class frmPagamentoCompra : Form
     {
-        public int pcoCod=0;
+        public int pcoCod = 0;
         public frmPagamentoCompra()
         {
             InitializeComponent();
@@ -94,7 +87,7 @@ namespace GUI
         {
             btPagar.Enabled = false;
             this.pcoCod = 0;
-            if (e.RowIndex >= 0 && dgvParcelas.Rows[e.RowIndex].Cells[2].Value.ToString()=="")
+            if (e.RowIndex >= 0 && dgvParcelas.Rows[e.RowIndex].Cells[2].Value.ToString() == "")
             {
                 btPagar.Enabled = true;
                 this.pcoCod = Convert.ToInt32(dgvParcelas.Rows[e.RowIndex].Cells[0].Value);

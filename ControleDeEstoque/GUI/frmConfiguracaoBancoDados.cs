@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DAL;
+﻿using DAL;
+using System;
 using System.Data.SqlClient;
+using System.IO;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -22,7 +15,8 @@ namespace GUI
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 StreamWriter arquivo = new StreamWriter("ConfiguracaoBanco.txt", false);
                 arquivo.WriteLine(txtServidor.Text);
                 arquivo.WriteLine(txtBanco.Text);
@@ -31,7 +25,7 @@ namespace GUI
                 arquivo.Close();
                 MessageBox.Show("Arquivo Atualizado com sucesso!!!");
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 MessageBox.Show(erro.Message);
             }

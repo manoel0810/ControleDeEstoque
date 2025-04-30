@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ferramentas
 {
@@ -13,12 +9,17 @@ namespace Ferramentas
         public static ArrayList ObtemBancoDeDadosSQLSever(String ConnString)
         {
             ArrayList lista = new ArrayList();
+
             //criou a conexao
             SqlConnection cn = new SqlConnection(ConnString);
+
             //criou o comando
-            SqlCommand cm = new SqlCommand();
-            cm.Connection = cn;
-            cm.CommandText = "SELECT [name] FROM sysdatabases";
+            SqlCommand cm = new SqlCommand
+            {
+                Connection = cn,
+                CommandText = "SELECT [name] FROM sysdatabases"
+            };
+
             //criou o datareader
             SqlDataReader dr;
             try
@@ -39,6 +40,7 @@ namespace Ferramentas
             {
                 cn.Close();
             }
+
             return lista;
         }
 
@@ -48,10 +50,14 @@ namespace Ferramentas
             //criou a conexao
             SqlConnection.ClearAllPools();
             SqlConnection cn = new SqlConnection(ConnString);
+
             //criou o comando
-            SqlCommand cm = new SqlCommand();
-            cm.Connection = cn;
-            cm.CommandText = "BACKUP DATABASE [" + nomeDB + "] TO DISK = '" + backupFile + "'";
+            SqlCommand cm = new SqlCommand
+            {
+                Connection = cn,
+                CommandText = "BACKUP DATABASE [" + nomeDB + "] TO DISK = '" + backupFile + "'"
+            };
+
             try
             {
                 cn.Open();
@@ -65,16 +71,19 @@ namespace Ferramentas
             {
                 cn.Close();
             }
-            //return backup;
 
+            //return backup;
         }
 
         public static void RestauraDatabase(String ConnString, string nomeDB, string backupFile)
         {
             SqlConnection cn = new SqlConnection(ConnString);
             //criou o comando
-            SqlCommand cm = new SqlCommand();
-            cm.Connection = cn;
+            SqlCommand cm = new SqlCommand
+            {
+                Connection = cn
+            };
+
             string sql = "RESTORE DATABASE [" + nomeDB + "] FROM DISK = '" + backupFile + "'  WITH REPLACE";
             cm.CommandText = sql;
             try
@@ -90,6 +99,7 @@ namespace Ferramentas
             {
                 cn.Close();
             }
+
             //return backup;
         }
     }

@@ -3,11 +3,6 @@ using DAL;
 using Ferramentas;
 using Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace GUI
@@ -153,7 +148,7 @@ namespace GUI
                 this.alteraBotoes(1);
             }
             f.Dispose();
-          
+
         }
 
         private void btAlterar_Click(object sender, EventArgs e)
@@ -202,7 +197,7 @@ namespace GUI
                 modelo.ForEmail = txtEmail.Text;
                 modelo.ForFone = txtFone.Text;
                 modelo.ForCelular = txtCelular.Text;
-               
+
                 //obj para gravar os dados no banco
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
                 BLLFornecedor bll = new BLLFornecedor(cx);
@@ -254,7 +249,7 @@ namespace GUI
 
         private void txtCep_Leave(object sender, EventArgs e)
         {
-            if (BuscaEndereco.verificaCEP(txtCep.Text) == true)
+            if (BuscaEndereco.VerificaCEP(txtCep.Text) == true)
             {
                 txtBairro.Text = BuscaEndereco.bairro;
                 txtEstado.Text = BuscaEndereco.estado;

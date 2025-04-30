@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Modelo
+﻿namespace Modelo
 {
     public class ModeloFornecedor
     {
-         //construtores
+        //construtores
         public ModeloFornecedor()
         {
             this.ForCod = 0;
@@ -29,7 +23,7 @@ namespace Modelo
 
         public ModeloFornecedor(int cod, string nome, string cpfcnpj, string rgie,
             string rsocial, string cep, string endereco, string bairro,
-            string fone, string celular, string email, string endnumero, 
+            string fone, string celular, string email, string endnumero,
             string cidade, string estado)
         {
             this.ForCod = cod;
@@ -146,5 +140,5 @@ namespace Modelo
             set { this.For_estado = value; }
         }
     }
-    
+
 }

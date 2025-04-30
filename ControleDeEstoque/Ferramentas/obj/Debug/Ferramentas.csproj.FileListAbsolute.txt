@@ -18,3 +18,15 @@ D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\Ferram
 D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.csprojResolveAssemblyReference.cache
 D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.dll
 D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.pdb
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\bin\Debug\Ferramentas.dll
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\bin\Debug\Ferramentas.pdb
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.csproj.AssemblyReference.cache
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.csproj.CoreCompileInputs.cache
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.dll
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.pdb
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\bin\Debug\Ferramentas.dll
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\bin\Debug\Ferramentas.pdb
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.csproj.AssemblyReference.cache
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.csproj.CoreCompileInputs.cache
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.dll
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.pdb

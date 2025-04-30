@@ -1,21 +1,19 @@
 ﻿using DAL;
 using Modelo;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL
 {
     public class BLLProduto
     {
-        private DALConexao conexao;
+        private readonly DALConexao conexao;
+
         public BLLProduto(DALConexao cx)
         {
-            this.conexao = cx;
+            conexao = cx;
         }
+
         public void Incluir(ModeloProduto obj)
         {
             if (obj.ProNome.Trim().Length == 0)
@@ -52,14 +50,17 @@ namespace BLL
             {
                 throw new Exception("O código da unidade de medida é obrigatório");
             }
+
             DALProduto DALobj = new DALProduto(conexao);
             DALobj.Incluir(obj);
         }
+
         public void Excluir(int codigo)
         {
             DALProduto DALobj = new DALProduto(conexao);
             DALobj.Excluir(codigo);
         }
+
         public void Alterar(ModeloProduto obj)
         {
             if (obj.ProNome.Trim().Length == 0)

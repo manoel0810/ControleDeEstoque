@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Modelo;
-using DAL;
+﻿using DAL;
 using Ferramentas;
+using Modelo;
+using System;
 using System.Data;
 
 namespace BLL
 {
     public class BLLFornecedor
     {
-        private DALConexao conexao;
+        private readonly DALConexao conexao;
+
         public BLLFornecedor(DALConexao cx)
         {
-            this.conexao = cx;
+            conexao = cx;
         }
 
         public void Incluir(ModeloFornecedor modelo)
@@ -30,12 +27,11 @@ namespace BLL
                 throw new Exception("O CNPJ do Fornecedor é obrigatório");
             }
 
-            
             if (Validacao.IsCnpj(modelo.ForCnpj) == false)
             {
                 throw new Exception("O CNPJ inválido");
             }
-          
+
             //verificar CPF/CNPJ
 
             if (modelo.ForIe.Trim().Length == 0)
@@ -91,6 +87,7 @@ namespace BLL
             DALFornecedor DALobj = new DALFornecedor(conexao);
             DALobj.Excluir(codigo);
         }
+
         public DataTable Localizar(String valor)
         {
             DALFornecedor DALobj = new DALFornecedor(conexao);
@@ -102,6 +99,7 @@ namespace BLL
             DALFornecedor DALobj = new DALFornecedor(conexao);
             return DALobj.LocalizarPorNome(valor);
         }
+
         public DataTable LocalizarPorCNPJ(String valor)
         {
             DALFornecedor DALobj = new DALFornecedor(conexao);

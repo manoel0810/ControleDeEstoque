@@ -1,30 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Modelo;
-using System.Data.SqlClient;
+﻿using Modelo;
+using System;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace DAL
 {
     public class DALCliente
     {
-        private DALConexao conexao;
+        private readonly DALConexao conexao;
+
         public DALCliente(DALConexao cx)
         {
-            this.conexao = cx;
+            conexao = cx;
         }
+
         public void Incluir(ModeloCliente modelo)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "insert into cliente(cli_nome, cli_cpfcnpj,cli_rgie,cli_rsocial,"+
-                "cli_tipo,cli_cep,cli_endereco,cli_bairro,cli_fone,cli_cel,cli_email,cli_endnumero,"+
-                "cli_cidade,cli_estado) values (@cli_nome, @cli_cpfcnpj,@cli_rgie,@cli_rsocial,"+
-                "@cli_tipo,@cli_cep,@cli_endereco,@cli_bairro,@cli_fone,@cli_cel,@cli_email,@cli_endnumero,"+
-                "@cli_cidade,@cli_estado); select @@IDENTITY;";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "insert into cliente(cli_nome, cli_cpfcnpj,cli_rgie,cli_rsocial," +
+                    "cli_tipo,cli_cep,cli_endereco,cli_bairro,cli_fone,cli_cel,cli_email,cli_endnumero," +
+                    "cli_cidade,cli_estado) values (@cli_nome, @cli_cpfcnpj,@cli_rgie,@cli_rsocial," +
+                    "@cli_tipo,@cli_cep,@cli_endereco,@cli_bairro,@cli_fone,@cli_cel,@cli_email,@cli_endnumero," +
+                    "@cli_cidade,@cli_estado); select @@IDENTITY;"
+            };
 
             cmd.Parameters.AddWithValue("@cli_nome", modelo.CliNome);
             cmd.Parameters.AddWithValue("@cli_cpfcnpj", modelo.CliCpfCnpj);
@@ -48,11 +48,13 @@ namespace DAL
 
         public void Alterar(ModeloCliente modelo)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "update cliente set cli_nome = @cli_nome, cli_cpfcnpj = @cli_cpfcnpj, cli_rgie = @cli_rgie, cli_rsocial = @cli_rsocial,"+
-                "cli_tipo = @cli_tipo, cli_cep = @cli_cep, cli_endereco = @cli_endereco, cli_bairro = @cli_bairro, cli_fone = @cli_fone, cli_cel = @cli_cel, cli_email = @cli_email, cli_endnumero = @cli_endnumero," +
-                "cli_cidade = @cli_cidade, cli_estado =@cli_estado where cli_cod = @codigo;";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "update cliente set cli_nome = @cli_nome, cli_cpfcnpj = @cli_cpfcnpj, cli_rgie = @cli_rgie, cli_rsocial = @cli_rsocial," +
+                    "cli_tipo = @cli_tipo, cli_cep = @cli_cep, cli_endereco = @cli_endereco, cli_bairro = @cli_bairro, cli_fone = @cli_fone, cli_cel = @cli_cel, cli_email = @cli_email, cli_endnumero = @cli_endnumero," +
+                    "cli_cidade = @cli_cidade, cli_estado =@cli_estado where cli_cod = @codigo;"
+            };
 
             cmd.Parameters.AddWithValue("@cli_nome", modelo.CliNome);
             cmd.Parameters.AddWithValue("@cli_cpfcnpj", modelo.CliCpfCnpj);
@@ -77,11 +79,15 @@ namespace DAL
 
         public void Excluir(int codigo)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "delete from cliente where cli_cod = @codigo;";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "delete from cliente where cli_cod = @codigo;"
+            };
+
             cmd.Parameters.AddWithValue("@codigo", codigo);
             conexao.Conectar();
+
             cmd.ExecuteNonQuery();
             conexao.Desconectar();
         }
@@ -91,6 +97,7 @@ namespace DAL
             DataTable tabela = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select * from cliente where cli_nome like '%" +
                 valor + "%'", conexao.StringConexao);
+
             da.Fill(tabela);
             return tabela;
         }
@@ -99,11 +106,13 @@ namespace DAL
         {
             return Localizar(valor);
         }
+
         public DataTable LocalizarPorCPFCNPJ(String valor)
         {
             DataTable tabela = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select * from cliente where cli_cpfcnpj like '%" +
                 valor + "%'", conexao.StringConexao);
+
             da.Fill(tabela);
             return tabela;
         }
@@ -111,9 +120,12 @@ namespace DAL
         public ModeloCliente CarregaModeloCliente(int codigo)
         {
             ModeloCliente modelo = new ModeloCliente();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "select * from cliente where cli_cod = @codigo";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "select * from cliente where cli_cod = @codigo"
+            };
+
             cmd.Parameters.AddWithValue("@codigo", codigo);
             conexao.Conectar();
             SqlDataReader registro = cmd.ExecuteReader();
@@ -137,15 +149,20 @@ namespace DAL
                 modelo.CliEstado = Convert.ToString(registro["cli_estado"]);
 
             }
+
             conexao.Desconectar();
             return modelo;
         }
+
         public ModeloCliente CarregaModeloCliente(string cpfcnpj)
         {
             ModeloCliente modelo = new ModeloCliente();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "select * from cliente where cli_cpfcnpj = @cpfcnpj";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "select * from cliente where cli_cpfcnpj = @cpfcnpj"
+            };
+
             cmd.Parameters.AddWithValue("@cpfcnpj", cpfcnpj);
             conexao.Conectar();
             SqlDataReader registro = cmd.ExecuteReader();
@@ -169,6 +186,7 @@ namespace DAL
                 modelo.CliEstado = Convert.ToString(registro["cli_estado"]);
 
             }
+
             registro.Close();
             conexao.Desconectar();
             return modelo;

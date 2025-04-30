@@ -1,17 +1,9 @@
 ﻿
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using DAL;
 using Ferramentas;
-using System.Security;
-using System.IO;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace MaterialDosAssinantes
 {
@@ -26,7 +18,7 @@ namespace MaterialDosAssinantes
             try
             {
                 SaveFileDialog d = new SaveFileDialog();
-               
+
                 d.FileName = string.Format("{0}_{1:yyyyMMdd_HHmmss}.bak", TxtDataBase.Text, DateTime.Now);
                 if (d.FileName != "")
                 {
@@ -45,7 +37,7 @@ namespace MaterialDosAssinantes
         }
 
         private void BtRestauracao_Click(object sender, EventArgs e)
-        {            
+        {
             try
             {
                 OpenFileDialog d = new OpenFileDialog();
@@ -55,7 +47,7 @@ namespace MaterialDosAssinantes
                 {
                     String nomeBanco = DadosDaConexao.banco;
                     String localBackup = d.FileName;
-                    String conexao = @"Data Source=" + DadosDaConexao.servidor  + ";Initial Catalog=master;User=" +
+                    String conexao = @"Data Source=" + DadosDaConexao.servidor + ";Initial Catalog=master;User=" +
                                      DadosDaConexao.usuario + ";Password=" + DadosDaConexao.senha;
                     var server = new Microsoft.SqlServer.Management.Smo.Server(TxtLocalBkp.Text);
                     server.KillDatabase(TxtDataBase.Text);

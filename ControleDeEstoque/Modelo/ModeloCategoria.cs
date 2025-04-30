@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Modelo
 {
@@ -14,7 +10,7 @@ namespace Modelo
             this.CatNome = "";
         }
 
-        public ModeloCategoria(int catcod, String nome )
+        public ModeloCategoria(int catcod, String nome)
         {
             this.CatCod = catcod;
             this.CatNome = nome;

@@ -1,29 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL;
+﻿using DAL;
 using Modelo;
+using System;
 using System.Data;
-
-
 
 namespace BLL
 {
     public class BLLItensCompra
     {
-        private DALConexao conexao;
+        private readonly DALConexao conexao;
+
         public BLLItensCompra(DALConexao cx)
         {
-            this.conexao = cx;
+            conexao = cx;
         }
+
         public void Incluir(ModeloItensCompra modelo)
         {
             if (modelo.ComCod <= 0)
             {
                 throw new Exception("O código da compra é obrigatório");
             }
+
             if (modelo.ItcCod <= 0)
             {
                 throw new Exception("O código do item da compra é obrigatório");
@@ -43,9 +40,11 @@ namespace BLL
             {
                 throw new Exception("O código do produto é obrigatório");
             }
+
             DALItensCompra DALobj = new DALItensCompra(conexao);
             DALobj.Incluir(modelo);
         }
+
         public void Alterar(ModeloItensCompra modelo)
         {
             if (modelo.ComCod <= 0)
@@ -71,9 +70,11 @@ namespace BLL
             {
                 throw new Exception("O código do produto é obrigatório");
             }
+
             DALItensCompra DALobj = new DALItensCompra(conexao);
             DALobj.Alterar(modelo);
         }
+
         public void Excluir(ModeloItensCompra modelo)
         {
             if (modelo.ComCod <= 0)
@@ -94,6 +95,7 @@ namespace BLL
             DALobj.Excluir(modelo);
 
         }
+
         public void ExcluirTodosOsItens(int comcod)
         {
             DALItensCompra DALobj = new DALItensCompra(conexao);

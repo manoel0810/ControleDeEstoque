@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DAL;
+﻿using DAL;
+using System;
 using System.Data.SqlClient;
+using System.IO;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -96,11 +89,12 @@ namespace GUI
                 arquivo.Close();
                 //testar a conexao
                 SqlConnection conexao = new SqlConnection();
-                conexao.ConnectionString = DadosDaConexao.StringDeConexao;
+
+                conexao.ConnectionString = "Server=(localdb)\\mssqllocaldb;Database=EstoqueApp;Trusted_Connection=True;MultipleActiveResultSets=true";
                 conexao.Open();
                 conexao.Close();
             }
-            catch(SqlException errob)
+            catch (SqlException errob)
             {
                 MessageBox.Show("Erro ao se conectar no banco de dados \n" +
                                 "Acesse as configurações do banco de dados e informe os parâmetros de conexao");

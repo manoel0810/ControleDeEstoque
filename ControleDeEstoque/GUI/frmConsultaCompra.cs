@@ -2,13 +2,6 @@
 using DAL;
 using Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
@@ -49,7 +42,7 @@ namespace GUI
             dgvDados.Columns[6].Visible = false;
             dgvDados.Columns[7].Visible = false;
             dgvDados.Columns[4].Width = 300;
-            
+
         }
         private void btLocFornecedor_Click(object sender, EventArgs e)
         {
@@ -112,7 +105,7 @@ namespace GUI
             DateTime dtfim = dateTimePicker2.Value;
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
             BLLCompra bllcompra = new BLLCompra(cx);
-            dgvDados.DataSource = bllcompra.Localizar(dtini,dtfim);
+            dgvDados.DataSource = bllcompra.Localizar(dtini, dtfim);
             this.AtualizaCabecalhoDGCompra();
         }
         public void alteraCabecalhoItensParcelas()

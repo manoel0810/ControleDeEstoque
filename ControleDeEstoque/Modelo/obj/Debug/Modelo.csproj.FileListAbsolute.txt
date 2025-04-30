@@ -16,3 +16,15 @@ D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\Modelo
 D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\Modelo\bin\Debug\Modelo.pdb
 D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\Modelo\obj\Debug\Modelo.dll
 D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\Modelo\obj\Debug\Modelo.pdb
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Modelo\bin\Debug\Modelo.dll
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Modelo\bin\Debug\Modelo.pdb
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Modelo\obj\Debug\Modelo.dll
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\Modelo\obj\Debug\Modelo.pdb
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Modelo\bin\Debug\Modelo.dll
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Modelo\bin\Debug\Modelo.pdb
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Modelo\obj\Debug\Modelo.dll
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\Modelo\obj\Debug\Modelo.pdb
