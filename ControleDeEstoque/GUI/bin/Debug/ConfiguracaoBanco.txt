@@ -1,4 +1,4 @@
-DESKTOP-NCG7SV1
-controledeestoque
-sa
-123456
+(localdb)\mssqllocaldb
+EstoqueApp
+
+

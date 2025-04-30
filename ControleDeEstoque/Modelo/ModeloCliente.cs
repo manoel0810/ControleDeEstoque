@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Modelo
+﻿namespace Modelo
 {
     public class ModeloCliente  //clitipo 0->fisica 1->juridica
     {
@@ -30,7 +24,7 @@ namespace Modelo
 
         public ModeloCliente(int cod, string nome, string cpfcnpj, string rgie,
             string rsocial, string tipo, string cep, string endereco, string bairro,
-            string fone, string celular, string email, string endnumero, 
+            string fone, string celular, string email, string endnumero,
             string cidade, string estado)
         {
             this.CliCod = cod;

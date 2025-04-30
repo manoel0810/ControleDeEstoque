@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Modelo
 {
@@ -56,7 +52,7 @@ namespace Modelo
         public int ComNFiscal
         {
             get { return this._com_nfiscal; }
-            set { this._com_nfiscal= value; }
+            set { this._com_nfiscal = value; }
         }
 
         private Double _com_total;

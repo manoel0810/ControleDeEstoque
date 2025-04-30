@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Modelo
 {
@@ -15,7 +11,7 @@ namespace Modelo
             this.ScatNome = "";
         }
 
-        public ModeloSubCategoria(int scatcod, int catcod, String snome )
+        public ModeloSubCategoria(int scatcod, int catcod, String snome)
         {
             this.CatCod = catcod;
             this.ScatCod = scatcod;

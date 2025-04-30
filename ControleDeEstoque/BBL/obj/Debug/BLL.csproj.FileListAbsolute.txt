@@ -42,3 +42,29 @@ D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\BBL\bi
 D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\BBL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\BBL\obj\Debug\BLL.dll
 D:\Danilo Filitto\Documents\Visual Studio 2017\Projects\ControleDeEstoque\BBL\obj\Debug\BLL.pdb
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\BLL.dll
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\BLL.pdb
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\DAL.dll
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Ferramentas.dll
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Modelo.dll
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\DAL.pdb
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Ferramentas.pdb
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Modelo.pdb
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.dll
+C:\Users\manoe\source\repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.pdb
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\BLL.dll
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\BLL.pdb
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\DAL.dll
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Ferramentas.dll
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Modelo.dll
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\DAL.pdb
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Ferramentas.pdb
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Modelo.pdb
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.csproj.Up2Date
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.dll
+D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.pdb

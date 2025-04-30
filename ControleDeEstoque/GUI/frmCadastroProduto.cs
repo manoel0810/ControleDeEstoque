@@ -1,17 +1,10 @@
 ﻿using BLL;
 using DAL;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Text;
-using System.Windows.Forms;
 using Modelo;
-using GUI;
-using DAL;
+using System;
+using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -19,7 +12,7 @@ namespace GUI
     {
         public string foto = "";
         public frmCadastroProduto()
-        {  
+        {
             InitializeComponent();
         }
 
@@ -48,8 +41,7 @@ namespace GUI
             cbCategoria.DataSource = bll.Localizar("");
             cbCategoria.DisplayMember = "cat_nome";
             cbCategoria.ValueMember = "cat_cod";
-            //cbCategoria.AutoCompleteMode = AutoCompleteMode.Suggest;
-            //cbCategoria.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             try
             {
                 //combo da subcategoria
@@ -58,7 +50,7 @@ namespace GUI
                 cbSubCategoria.DisplayMember = "scat_nome";
                 cbSubCategoria.ValueMember = "scat_cod";
             }
-            catch 
+            catch
             {
                 //MessageBox.Show("Cadastre uma categoria");
             }
@@ -67,12 +59,12 @@ namespace GUI
             cbUnd.DataSource = ubll.Localizar("");
             cbUnd.DisplayMember = "umed_nome";
             cbUnd.ValueMember = "umed_cod";
-            
+
         }
 
         private void txtValorPago_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != ',' && e.KeyChar != '.')
             {
                 e.Handled = true;
@@ -95,7 +87,7 @@ namespace GUI
             }
             else
             {
-                if (txtValorPago.Text.IndexOf(",")==txtValorPago.Text.Length-1)
+                if (txtValorPago.Text.IndexOf(",") == txtValorPago.Text.Length - 1)
                 {
                     txtValorPago.Text += "00";
                 }
@@ -208,7 +200,7 @@ namespace GUI
                 modelo.UmedCod = Convert.ToInt32(cbUnd.SelectedValue);
                 modelo.CatCod = Convert.ToInt32(cbCategoria.SelectedValue);
                 modelo.ScatCod = Convert.ToInt32(cbSubCategoria.SelectedValue);
-                
+
                 //obj para gravar os dados no banco
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
                 BLLProduto bll = new BLLProduto(cx);
@@ -222,9 +214,9 @@ namespace GUI
                 }
                 else
                 {
-                    modelo.ProCod = Convert.ToInt32(txtCodigo.Text);  
+                    modelo.ProCod = Convert.ToInt32(txtCodigo.Text);
                     //alterar um produto
-                    if ( this.foto == "Foto Original")
+                    if (this.foto == "Foto Original")
                     {
                         ModeloProduto mt = bll.CarregaModeloProduto(modelo.ProCod);
                         modelo.ProFoto = mt.ProFoto;
@@ -273,7 +265,7 @@ namespace GUI
                 this.foto = od.FileName;
                 pbFoto.Load(this.foto);
             }
-            
+
         }
 
         private void btRmFoto_Click(object sender, EventArgs e)
@@ -284,7 +276,7 @@ namespace GUI
 
         private void btLocalizar_Click(object sender, EventArgs e)
         {
-             frmConsultaProduto f = new frmConsultaProduto();
+            frmConsultaProduto f = new frmConsultaProduto();
             f.ShowDialog();
             if (f.codigo != 0)
             {
@@ -308,11 +300,11 @@ namespace GUI
                     pbFoto.Image = Image.FromStream(ms);
                     this.foto = "Foto Original";
                 }
-                catch {}
+                catch { }
 
-                txtQtde_Leave(sender,e);
+                txtQtde_Leave(sender, e);
                 txtValorPago_Leave(sender, e);
-                txtValorVenda_Leave(sender, e); 
+                txtValorVenda_Leave(sender, e);
                 alteraBotoes(3);
             }
             else
@@ -321,7 +313,7 @@ namespace GUI
                 this.alteraBotoes(1);
             }
             f.Dispose();
-         
+
         }
 
         private void btExcluir_Click(object sender, EventArgs e)
@@ -391,7 +383,7 @@ namespace GUI
 
             //combo da categoria
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
-            
+
             try
             {
                 //combo da subcategoria
@@ -417,7 +409,7 @@ namespace GUI
             cbUnd.DataSource = ubll.Localizar("");
             cbUnd.DisplayMember = "umed_nome";
             cbUnd.ValueMember = "umed_cod";
-            
+
         }
     }
 }

@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+﻿using BLL;
+using DAL;
 using Ferramentas;
 using Modelo;
-using DAL;
-using BLL;
-using BBL;
-using Ferramentas;
+using System;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -102,7 +95,7 @@ namespace GUI
                     }
                     break;
             }
-        }        
+        }
         public frmCadastroCliente()
         {
             InitializeComponent();
@@ -116,7 +109,7 @@ namespace GUI
 
         private void btLocalizar_Click(object sender, EventArgs e)
         {
-            
+
             frmConsultaCliente f = new frmConsultaCliente();
             f.ShowDialog();
             if (f.codigo != 0)
@@ -157,7 +150,7 @@ namespace GUI
                 this.alteraBotoes(1);
             }
             f.Dispose();
-           
+
         }
 
         private void btAlterar_Click(object sender, EventArgs e)
@@ -189,7 +182,7 @@ namespace GUI
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
-             try
+            try
             {
                 //leitura dos dados
                 ModeloCliente modelo = new ModeloCliente();
@@ -222,7 +215,7 @@ namespace GUI
                 {
                     //cadastrar uma categoria
                     bll.Incluir(modelo);
-                    MessageBox.Show("Cadastro efetuado: Código "+modelo.CliCod.ToString());
+                    MessageBox.Show("Cadastro efetuado: Código " + modelo.CliCod.ToString());
 
                 }
                 else
@@ -235,11 +228,11 @@ namespace GUI
                 this.LimpaTela();
                 this.alteraBotoes(1);
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 MessageBox.Show(erro.Message);
             }
-           
+
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
@@ -275,7 +268,7 @@ namespace GUI
 
         private void rbFisica_CheckedChanged(object sender, EventArgs e)
         {
-            if(rbFisica.Checked == true)
+            if (rbFisica.Checked == true)
             {
                 lbRSocial.Visible = false;
                 txtRsocial.Visible = false;
@@ -303,18 +296,18 @@ namespace GUI
             }
             else
             {
-                if (BuscaEndereco.verificaCEP(txtCep.Text)==true)
-                    {
-                        txtBairro.Text = BuscaEndereco.bairro;
-                        txtEstado.Text = BuscaEndereco.estado;
-                        txtCidade.Text = BuscaEndereco.cidade;
-                        txtRua.Text = BuscaEndereco.endereco;
-                    }
+                if (BuscaEndereco.VerificaCEP(txtCep.Text) == true)
+                {
+                    txtBairro.Text = BuscaEndereco.bairro;
+                    txtEstado.Text = BuscaEndereco.estado;
+                    txtCidade.Text = BuscaEndereco.cidade;
+                    txtRua.Text = BuscaEndereco.endereco;
+                }
             }
-            
+
         }
 
-       
+
 
         private void txtCPFCNPJ_Leave(object sender, EventArgs e)
         {

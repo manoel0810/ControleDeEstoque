@@ -1,30 +1,30 @@
 ﻿using Modelo;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
     public class DALFornecedor
     {
-        private DALConexao conexao;
+        private readonly DALConexao conexao;
+
         public DALFornecedor(DALConexao cx)
         {
-            this.conexao = cx;
+            conexao = cx;
         }
+
         public void Incluir(ModeloFornecedor modelo)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "insert into Fornecedor(For_nome, For_cnpj,For_ie,For_rsocial,"+
-                "For_cep,For_endereco,For_bairro,For_fone,For_cel,For_email,For_endnumero,"+
-                "For_cidade,For_estado) values (@For_nome, @For_cnpj,@For_ie,@For_rsocial,"+
-                "@For_cep,@For_endereco,@For_bairro,@For_fone,@For_cel,@For_email,@For_endnumero,"+
-                "@For_cidade,@For_estado); select @@IDENTITY;";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "insert into Fornecedor(For_nome, For_cnpj,For_ie,For_rsocial," +
+                    "For_cep,For_endereco,For_bairro,For_fone,For_cel,For_email,For_endnumero," +
+                    "For_cidade,For_estado) values (@For_nome, @For_cnpj,@For_ie,@For_rsocial," +
+                    "@For_cep,@For_endereco,@For_bairro,@For_fone,@For_cel,@For_email,@For_endnumero," +
+                    "@For_cidade,@For_estado); select @@IDENTITY;"
+            };
 
             cmd.Parameters.AddWithValue("@For_nome", modelo.ForNome);
             cmd.Parameters.AddWithValue("@For_cnpj", modelo.ForCnpj);
@@ -47,11 +47,13 @@ namespace DAL
 
         public void Alterar(ModeloFornecedor modelo)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "update Fornecedor set For_nome = @For_nome, For_cnpj = @For_cnpj, For_ie = @For_ie, For_rsocial = @For_rsocial,"+
-                "For_cep = @For_cep, For_endereco = @For_endereco, For_bairro = @For_bairro, For_fone = @For_fone, For_cel = @For_cel, For_email = @For_email, For_endnumero = @For_endnumero," +
-                "For_cidade = @For_cidade, For_estado =@For_estado where For_cod = @codigo;";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "update Fornecedor set For_nome = @For_nome, For_cnpj = @For_cnpj, For_ie = @For_ie, For_rsocial = @For_rsocial," +
+                    "For_cep = @For_cep, For_endereco = @For_endereco, For_bairro = @For_bairro, For_fone = @For_fone, For_cel = @For_cel, For_email = @For_email, For_endnumero = @For_endnumero," +
+                    "For_cidade = @For_cidade, For_estado =@For_estado where For_cod = @codigo;"
+            };
 
             cmd.Parameters.AddWithValue("@For_nome", modelo.ForNome);
             cmd.Parameters.AddWithValue("@For_cnpj", modelo.ForCnpj);
@@ -75,11 +77,15 @@ namespace DAL
 
         public void Excluir(int codigo)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "delete from Fornecedor where For_cod = @codigo;";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "delete from Fornecedor where For_cod = @codigo;"
+            };
+
             cmd.Parameters.AddWithValue("@codigo", codigo);
             conexao.Conectar();
+
             cmd.ExecuteNonQuery();
             conexao.Desconectar();
         }
@@ -89,6 +95,7 @@ namespace DAL
             DataTable tabela = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select * from Fornecedor where For_nome like '%" +
                 valor + "%'", conexao.StringConexao);
+
             da.Fill(tabela);
             return tabela;
         }
@@ -97,11 +104,13 @@ namespace DAL
         {
             return Localizar(valor);
         }
+
         public DataTable LocalizarPorCNPJ(String valor)
         {
             DataTable tabela = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select * from Fornecedor where For_cnpj like '%" +
                 valor + "%'", conexao.StringConexao);
+
             da.Fill(tabela);
             return tabela;
         }
@@ -109,9 +118,12 @@ namespace DAL
         public ModeloFornecedor CarregaModeloFornecedor(int codigo)
         {
             ModeloFornecedor modelo = new ModeloFornecedor();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "select * from Fornecedor where For_cod = @codigo";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "select * from Fornecedor where For_cod = @codigo"
+            };
+
             cmd.Parameters.AddWithValue("@codigo", codigo);
             conexao.Conectar();
             SqlDataReader registro = cmd.ExecuteReader();
@@ -134,15 +146,20 @@ namespace DAL
                 modelo.ForEstado = Convert.ToString(registro["For_estado"]);
 
             }
+
             conexao.Desconectar();
             return modelo;
         }
+
         public ModeloFornecedor CarregaModeloFornecedor(string cnpj)
         {
             ModeloFornecedor modelo = new ModeloFornecedor();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "select * from Fornecedor where For_cnpj = @cnpj";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "select * from Fornecedor where For_cnpj = @cnpj"
+            };
+
             cmd.Parameters.AddWithValue("@cnpj", cnpj);
             conexao.Conectar();
             SqlDataReader registro = cmd.ExecuteReader();
@@ -165,6 +182,7 @@ namespace DAL
                 modelo.ForEstado = Convert.ToString(registro["For_estado"]);
 
             }
+
             registro.Close();
             conexao.Desconectar();
             return modelo;

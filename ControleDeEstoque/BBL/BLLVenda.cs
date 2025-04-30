@@ -1,26 +1,20 @@
 ﻿using DAL;
 using Modelo;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL
 {
     public class BLLVenda
     {
-        private DALConexao conexao;
+        private readonly DALConexao conexao;
         public BLLVenda(DALConexao cx)
         {
-            this.conexao = cx;
+            conexao = cx;
         }
 
         public void Incluir(ModeloVenda modelo)
         {
-
-
             if (modelo.VenNParcelas <= 0)
             {
                 throw new Exception("O número de parcelas dever ser maior do que zero");
@@ -44,10 +38,9 @@ namespace BLL
             DALVenda DALobj = new DALVenda(conexao);
             DALobj.Incluir(modelo);
         }
+
         public void Alterar(ModeloVenda modelo)
         {
-
-
             if (modelo.VenNParcelas <= 0)
             {
                 throw new Exception("O número de parcelas dever ser maior do que zero");
@@ -74,8 +67,6 @@ namespace BLL
 
         public void Excluir(int codigo)
         {
-
-
             if (codigo <= 0)
             {
                 throw new Exception("O número deve ser maior do que zero");
@@ -84,6 +75,7 @@ namespace BLL
             DALVenda DALobj = new DALVenda(conexao);
             DALobj.Excluir(codigo);
         }
+
         public Boolean CancelarVenda(int codigo)
         {
             if (codigo <= 0)
@@ -94,16 +86,19 @@ namespace BLL
             DALVenda DALobj = new DALVenda(conexao);
             return DALobj.CancelarVenda(codigo);
         }
+
         public DataTable Localizar(int codigo)
         {
             DALVenda DALobj = new DALVenda(conexao);
             return DALobj.Localizar(codigo);
         }
+
         public DataTable Localizar(String nome)
         {
             DALVenda DALobj = new DALVenda(conexao);
             return DALobj.Localizar(nome);
         }
+
         public DataTable Localizar()
         {
             DALVenda DALobj = new DALVenda(conexao);
@@ -122,6 +117,7 @@ namespace BLL
             {
                 throw new Exception("O número deve ser maior do que zero");
             }
+
             DALVenda DALobj = new DALVenda(conexao);
             return DALobj.QuantidadeParcelasNaoPagas(Codigo);
         }
@@ -138,9 +134,9 @@ namespace BLL
             {
                 throw new Exception("O número deve ser maior do que zero");
             }
+
             DALVenda DALobj = new DALVenda(conexao);
             return DALobj.CarregaModeloVenda(codigo);
         }
     }
-
 }

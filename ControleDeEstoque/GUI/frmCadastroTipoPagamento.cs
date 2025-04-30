@@ -1,13 +1,8 @@
-﻿using DAL;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using BLL;
+﻿using BLL;
+using DAL;
 using Modelo;
+using System;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -49,7 +44,7 @@ namespace GUI
                 this.alteraBotoes(1);
             }
             f.Dispose();
-            
+
         }
 
         private void btAlterar_Click(object sender, EventArgs e)

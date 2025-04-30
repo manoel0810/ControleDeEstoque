@@ -2,11 +2,7 @@
 using DAL;
 using Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace GUI
@@ -52,7 +48,7 @@ namespace GUI
                     txtCliCodigo.Clear();
                     lCliente.Text = "Informe o código do cliente ou clique em localizar";
                 }
-                else  lCliente.Text = modelo.CliNome;
+                else lCliente.Text = modelo.CliNome;
             }
             catch
             {
@@ -70,7 +66,7 @@ namespace GUI
                 txtProCod.Text = f.codigo.ToString();
 
                 txtProCod_Leave(sender, e);
-                
+
             }
         }
 
@@ -118,15 +114,16 @@ namespace GUI
         private void btAddProd_Click(object sender, EventArgs e)
         {
             Double Qtde = 0;
-            try {
+            try
+            {
                 if ((txtProCod.Text != "") && (txtQtde.Text != "") && (txtValor.Text != ""))
                 {
                     if (cbValidaQtde.Checked == true)
                     {
                         Qtde = VerificaQtdeProdutos(Convert.ToInt32(txtProCod.Text));
-                        if(Convert.ToDouble(txtQtde.Text) > Qtde)
+                        if (Convert.ToDouble(txtQtde.Text) > Qtde)
                         {
-                            MessageBox.Show("Quantidade de produtos indisponível.\n Você possui "+Qtde+
+                            MessageBox.Show("Quantidade de produtos indisponível.\n Você possui " + Qtde +
                                 " unidades em estoque");
                             return;
                         }
@@ -234,7 +231,7 @@ namespace GUI
                     }
                 }
                 pnFinalizaCompra.Visible = true;
-                
+
 
 
             }
@@ -242,8 +239,8 @@ namespace GUI
             {
                 MessageBox.Show("Verifique os campos da tela de venda");
             }
-               
-            
+
+
         }
 
         private void btCancelarFinal_Click(object sender, EventArgs e)
@@ -260,7 +257,7 @@ namespace GUI
             try
             {
                 //leitura dos dados
-                ModeloVenda modeloVenda= new ModeloVenda();
+                ModeloVenda modeloVenda = new ModeloVenda();
                 modeloVenda.VenData = dtDataVenda.Value;
                 modeloVenda.VenNFiscal = Convert.ToInt32(txtNFiscal.Text);
                 modeloVenda.VenNParcelas = Convert.ToInt32(cbNParcela.Text);
@@ -269,7 +266,7 @@ namespace GUI
                 modeloVenda.CliCod = Convert.ToInt32(txtCliCodigo.Text);
                 modeloVenda.TpaCod = Convert.ToInt32(cbTpagto.SelectedValue);
                 if (cbxVendaAVista.Checked == true)
-                     modeloVenda.VenAvista = 1;
+                    modeloVenda.VenAvista = 1;
                 else modeloVenda.VenAvista = 0;
 
                 //obj para gravar os dados no banco
@@ -287,7 +284,7 @@ namespace GUI
                     bllVenda.Incluir(modeloVenda);
 
                     //cadastrar os itens da venda
-                    
+
                     for (int i = 0; i < dgvItens.RowCount; i++)
                     {
                         mitens.ItvCod = i + 1;
@@ -312,7 +309,7 @@ namespace GUI
                     MessageBox.Show("Venda efetuada: Código " + modeloVenda.VenCod.ToString());
 
                 }
-               
+
                 //this.LimpaTela();
                 pnFinalizaCompra.Visible = false;
                 this.alteraBotoes(1);

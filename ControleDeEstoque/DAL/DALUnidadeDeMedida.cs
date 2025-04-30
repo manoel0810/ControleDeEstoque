@@ -1,49 +1,54 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Modelo;
-using System.Data.SqlClient;
+﻿using Modelo;
+using System;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace DAL
 {
     public class DALUnidadeDeMedida
     {
-        private DALConexao conexao;
+        private readonly DALConexao conexao;
+
         public DALUnidadeDeMedida(DALConexao cx)
         {
-            this.conexao = cx;
+            conexao = cx;
         }
+
         public void Incluir(ModeloUnidadeDeMedida modelo)
         {
             try
             {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conexao.ObjetoConexao;
-                cmd.CommandText = "insert into undmedida(umed_nome) values (@nome); select @@IDENTITY;";
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = conexao.ObjetoConexao,
+                    CommandText = "insert into undmedida(umed_nome) values (@nome); select @@IDENTITY;"
+                };
+
                 cmd.Parameters.AddWithValue("@nome", modelo.UmedNome);
                 conexao.Conectar();
                 modelo.UmedCod = Convert.ToInt32(cmd.ExecuteScalar());
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 throw new Exception(erro.Message);
             }
             finally
-            { 
-                conexao.Desconectar(); 
+            {
+                conexao.Desconectar();
             }
-            
+
         }
+
         public void Alterar(ModeloUnidadeDeMedida modelo)
         {
-            try 
-            { 
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conexao.ObjetoConexao;
-                cmd.CommandText = "update undmedida set umed_nome = @nome where umed_cod = @cod;";
+            try
+            {
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = conexao.ObjetoConexao,
+                    CommandText = "update undmedida set umed_nome = @nome where umed_cod = @cod;"
+                };
+
                 cmd.Parameters.AddWithValue("@nome", modelo.UmedNome);
                 cmd.Parameters.AddWithValue("@cod", modelo.UmedCod);
                 conexao.Conectar();
@@ -57,14 +62,19 @@ namespace DAL
             {
                 conexao.Desconectar();
             }
-            
+
         }
+
         public void Excluir(int codigo)
         {
-            try { 
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conexao.ObjetoConexao;
-                cmd.CommandText = "delete from undmedida where umed_cod = @codigo;";
+            try
+            {
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = conexao.ObjetoConexao,
+                    CommandText = "delete from undmedida where umed_cod = @codigo;"
+                };
+
                 cmd.Parameters.AddWithValue("@codigo", codigo);
                 conexao.Conectar();
                 cmd.ExecuteNonQuery();
@@ -77,7 +87,7 @@ namespace DAL
             {
                 conexao.Desconectar();
             }
-            
+
         }
 
         public DataTable Localizar(String valor)
@@ -85,25 +95,30 @@ namespace DAL
             DataTable tabela = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("select * from undmedida where umed_nome like '%" +
                 valor + "%'", conexao.StringConexao);
+
             da.Fill(tabela);
             return tabela;
         }
 
-
         public int VerificaUnidadeDeMedida(String valor) //0 - não existe || numero > 0 existe
         {
             int r = 0; //0 - não existe
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "select * from undmedida where umed_nome = @nome";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "select * from undmedida where umed_nome = @nome"
+            };
+
             cmd.Parameters.AddWithValue("@nome", valor);
             conexao.Conectar();
+
             SqlDataReader registro = cmd.ExecuteReader();
             if (registro.HasRows)
             {
                 registro.Read();
                 r = Convert.ToInt32(registro["umed_cod"]);
             }
+
             conexao.Desconectar();
             return r;
         }
@@ -111,11 +126,15 @@ namespace DAL
         public ModeloUnidadeDeMedida CarregaModeloUnidadeDeMedida(int codigo)
         {
             ModeloUnidadeDeMedida modelo = new ModeloUnidadeDeMedida();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "select * from undmedida where umed_cod = @codigo";
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = conexao.ObjetoConexao,
+                CommandText = "select * from undmedida where umed_cod = @codigo"
+            };
+
             cmd.Parameters.AddWithValue("@codigo", codigo);
             conexao.Conectar();
+
             SqlDataReader registro = cmd.ExecuteReader();
             if (registro.HasRows)
             {
@@ -123,10 +142,10 @@ namespace DAL
                 modelo.UmedCod = Convert.ToInt32(registro["umed_cod"]);
                 modelo.UmedNome = Convert.ToString(registro["umed_nome"]);
             }
+
             registro.Close();
             conexao.Desconectar();
             return modelo;
         }
     }
-
 }

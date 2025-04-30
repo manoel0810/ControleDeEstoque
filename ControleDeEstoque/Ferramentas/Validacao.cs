@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace Ferramentas
 {
@@ -104,6 +99,7 @@ namespace Ferramentas
                 return cnpj.EndsWith(digito);
             }
         }
+
         public static bool ValidaEmail(string email)
         {
             string strRegex = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}"
@@ -113,9 +109,10 @@ namespace Ferramentas
             Regex re = new Regex(strRegex);
             return re.IsMatch(email);
         }
+
         public static bool ValidaCep(string cep)
         {
-            return System.Text.RegularExpressions.Regex.IsMatch(cep, ("[0-9]{5}-[0-9]{3}"));
+            return Regex.IsMatch(cep, ("[0-9]{5}-[0-9]{3}"));
         }
     }
 }
