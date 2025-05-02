@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmModeloDeFormularioDeCadastro
+    partial class ModeloDeFormularioDeCadastro
     {
         /// <summary>
         /// Required designer variable.

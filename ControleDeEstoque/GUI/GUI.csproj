@@ -56,17 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmBackupBancoDeDados.cs">
+    <Compile Include="BackupBancoDeDados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBackupBancoDeDados.Designer.cs">
-      <DependentUpon>frmBackupBancoDeDados.cs</DependentUpon>
+    <Compile Include="BackupBancoDeDados.Designer.cs">
+      <DependentUpon>BackupBancoDeDados.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroCategoria.cs">
+    <Compile Include="CadastroCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroCategoria.Designer.cs">
-      <DependentUpon>frmCadastroCategoria.cs</DependentUpon>
+    <Compile Include="CadastroCategoria.Designer.cs">
+      <DependentUpon>CadastroCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCadastroCliente.cs">
       <SubType>Form</SubType>
@@ -164,11 +164,11 @@
     <Compile Include="frmConsultaVenda.Designer.cs">
       <DependentUpon>frmConsultaVenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmModeloDeFormularioDeCadastro.cs">
+    <Compile Include="ModeloDeFormularioDeCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmModeloDeFormularioDeCadastro.Designer.cs">
-      <DependentUpon>frmModeloDeFormularioDeCadastro.cs</DependentUpon>
+    <Compile Include="ModeloDeFormularioDeCadastro.Designer.cs">
+      <DependentUpon>ModeloDeFormularioDeCadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMovimentacaoCompra.cs">
       <SubType>Form</SubType>
@@ -208,11 +208,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBackupBancoDeDados.resx">
-      <DependentUpon>frmBackupBancoDeDados.cs</DependentUpon>
+    <Compile Include="UIConstants.cs" />
+    <EmbeddedResource Include="BackupBancoDeDados.resx">
+      <DependentUpon>BackupBancoDeDados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroCategoria.resx">
-      <DependentUpon>frmCadastroCategoria.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroCategoria.resx">
+      <DependentUpon>CadastroCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroCliente.resx">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
@@ -262,8 +263,8 @@
     <EmbeddedResource Include="frmConsultaVenda.resx">
       <DependentUpon>frmConsultaVenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmModeloDeFormularioDeCadastro.resx">
-      <DependentUpon>frmModeloDeFormularioDeCadastro.cs</DependentUpon>
+    <EmbeddedResource Include="ModeloDeFormularioDeCadastro.resx">
+      <DependentUpon>ModeloDeFormularioDeCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMovimentacaoCompra.resx">
       <DependentUpon>frmMovimentacaoCompra.cs</DependentUpon>

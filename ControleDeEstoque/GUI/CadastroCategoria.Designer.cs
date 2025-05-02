@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmCadastroCategoria
+    partial class CadastroCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -45,34 +45,34 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            this.btCancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // btSalvar
             // 
-            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
+            this.btSalvar.Click += new System.EventHandler(this.Salvar_Click);
             // 
             // btExcluir
             // 
-            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
+            this.btExcluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
             // btAlterar
             // 
-            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
+            this.btAlterar.Click += new System.EventHandler(this.Alterar_Click);
             // 
             // btLocalizar
             // 
-            this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click);
+            this.btLocalizar.Click += new System.EventHandler(this.Localizar_Click);
             // 
             // btInserir
             // 
-            this.btInserir.Click += new System.EventHandler(this.btInserir_Click);
+            this.btInserir.Click += new System.EventHandler(this.Inserir_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
@@ -81,12 +81,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(11, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 17);
+            this.label2.Size = new System.Drawing.Size(125, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome da Categoria";
             // 
             // txtCodigo
             // 
+            this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(14, 50);
             this.txtCodigo.Name = "txtCodigo";
@@ -95,6 +96,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Location = new System.Drawing.Point(14, 104);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(730, 22);
@@ -104,9 +106,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCadastroCategoria";
             this.Text = "Cadastro de categoria";
-            this.Load += new System.EventHandler(this.frmCadastroCategoria_Load);
+            this.Load += new System.EventHandler(this.CadastroCategoria_Load);
             this.pnDados.ResumeLayout(false);
             this.pnDados.PerformLayout();
             this.pnBotoes.ResumeLayout(false);

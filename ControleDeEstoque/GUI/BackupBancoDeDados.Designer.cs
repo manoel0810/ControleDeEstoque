@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmBackupBancoDeDados
+    partial class BackupBancoDeDados
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             this.btBackup.TabIndex = 0;
             this.btBackup.Text = "Backup do banco de dados";
             this.btBackup.UseVisualStyleBackColor = true;
-            this.btBackup.Click += new System.EventHandler(this.btBackup_Click);
+            this.btBackup.Click += new System.EventHandler(this.Backup_Click);
             // 
             // btRestaurar
             // 
@@ -52,16 +52,19 @@
             this.btRestaurar.TabIndex = 3;
             this.btRestaurar.Text = "Restaurar o banco de dados";
             this.btRestaurar.UseVisualStyleBackColor = true;
-            this.btRestaurar.Click += new System.EventHandler(this.btRestaurar_Click);
+            this.btRestaurar.Click += new System.EventHandler(this.Restaurar_Click);
             // 
-            // frmBackupBancoDeDados
+            // BackupBancoDeDados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 529);
             this.Controls.Add(this.btRestaurar);
             this.Controls.Add(this.btBackup);
-            this.Name = "frmBackupBancoDeDados";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "BackupBancoDeDados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Backup do banco de dados";
             this.ResumeLayout(false);

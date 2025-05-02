@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmCadastroSubCategoria : GUI.frmModeloDeFormularioDeCadastro
+    public partial class frmCadastroSubCategoria : GUI.ModeloDeFormularioDeCadastro
     {
         public frmCadastroSubCategoria()
         {
@@ -21,7 +21,7 @@ namespace GUI
 
         private void frmCadastroSubCategoria_Load(object sender, EventArgs e)
         {
-            this.alteraBotoes(1);
+            this.AlteraBotoes(1);
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
             BLLCategoria bll = new BLLCategoria(cx);
             cbCatCod.DataSource = bll.Localizar("");
@@ -31,13 +31,13 @@ namespace GUI
 
         private void btInserir_Click(object sender, EventArgs e)
         {
-            this.alteraBotoes(2);
+            this.AlteraBotoes(2);
             this.operacao = "inserir";
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
-            this.alteraBotoes(1);
+            this.AlteraBotoes(1);
             this.LimpaTela();
         }
 
@@ -64,10 +64,10 @@ namespace GUI
                     //alterar uma categoria
                     modelo.ScatCod = Convert.ToInt32(txtScatCod.Text);
                     bll.Alterar(modelo);
-                    MessageBox.Show("Cadastro alterado");
+                    MessageBox.Show(UIConstants.CadastroAlterado);
                 }
                 this.LimpaTela();
-                this.alteraBotoes(1);
+                this.AlteraBotoes(1);
             }
             catch (Exception erro)
             {
@@ -79,26 +79,26 @@ namespace GUI
         {
             try
             {
-                DialogResult d = MessageBox.Show("Deseja excluir o registro?", "Aviso", MessageBoxButtons.YesNo);
+                DialogResult d = MessageBox.Show(UIConstants.ExcluirConfirmacao, "Aviso", MessageBoxButtons.YesNo);
                 if (d.ToString() == "Yes")
                 {
                     DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
                     BLLSubCategoria bll = new BLLSubCategoria(cx);
                     bll.Excluir(Convert.ToInt32(txtScatCod.Text));
                     this.LimpaTela();
-                    this.alteraBotoes(1);
+                    this.AlteraBotoes(1);
                 }
             }
             catch
             {
                 MessageBox.Show("Impossível excluir o registro. \n O registro esta sendo utilizado em outro local.");
-                this.alteraBotoes(3);
+                this.AlteraBotoes(3);
             }
         }
 
         private void btAlterar_Click(object sender, EventArgs e)
         {
-            alteraBotoes(2);
+            AlteraBotoes(2);
             this.operacao = "alterar";
         }
 
@@ -114,19 +114,19 @@ namespace GUI
                 txtScatCod.Text = modelo.ScatCod.ToString();
                 txtNome.Text = modelo.ScatNome;
                 cbCatCod.SelectedValue = modelo.CatCod;
-                alteraBotoes(3);
+                AlteraBotoes(3);
             }
             else
             {
                 this.LimpaTela();
-                this.alteraBotoes(1);
+                this.AlteraBotoes(1);
             }
             f.Dispose();
         }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            frmCadastroCategoria f = new frmCadastroCategoria();
+            CadastroCategoria f = new CadastroCategoria();
             f.ShowDialog();
             f.Dispose();
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);

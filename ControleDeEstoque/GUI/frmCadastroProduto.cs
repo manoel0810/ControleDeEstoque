@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmCadastroProduto : GUI.frmModeloDeFormularioDeCadastro
+    public partial class frmCadastroProduto : GUI.ModeloDeFormularioDeCadastro
     {
         public string foto = "";
         public frmCadastroProduto()
@@ -19,7 +19,7 @@ namespace GUI
         private void btInserir_Click(object sender, EventArgs e)
         {
             this.operacao = "inserir";
-            this.alteraBotoes(2);
+            this.AlteraBotoes(2);
         }
         private void LimpaTela()
         {
@@ -34,7 +34,7 @@ namespace GUI
         }
         private void frmCadastroProduto_Load(object sender, EventArgs e)
         {
-            this.alteraBotoes(1);
+            this.AlteraBotoes(1);
             //combo da categoria
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
             BLLCategoria bll = new BLLCategoria(cx);
@@ -183,7 +183,7 @@ namespace GUI
         private void btAlterar_Click(object sender, EventArgs e)
         {
             this.operacao = "alterar";
-            this.alteraBotoes(2);
+            this.AlteraBotoes(2);
         }
 
         private void btSalvar_Click(object sender, EventArgs e)
@@ -226,10 +226,10 @@ namespace GUI
                         modelo.CarregaImagem(this.foto);
                     }
                     bll.Alterar(modelo);
-                    MessageBox.Show("Cadastro alterado");
+                    MessageBox.Show(UIConstants.CadastroAlterado);
                 }
                 this.LimpaTela();
-                this.alteraBotoes(1);
+                this.AlteraBotoes(1);
             }
             catch (Exception erro)
             {
@@ -305,12 +305,12 @@ namespace GUI
                 txtQtde_Leave(sender, e);
                 txtValorPago_Leave(sender, e);
                 txtValorVenda_Leave(sender, e);
-                alteraBotoes(3);
+                AlteraBotoes(3);
             }
             else
             {
                 this.LimpaTela();
-                this.alteraBotoes(1);
+                this.AlteraBotoes(1);
             }
             f.Dispose();
 
@@ -320,26 +320,26 @@ namespace GUI
         {
             try
             {
-                DialogResult d = MessageBox.Show("Deseja excluir o registro?", "Aviso", MessageBoxButtons.YesNo);
+                DialogResult d = MessageBox.Show(UIConstants.ExcluirConfirmacao, "Aviso", MessageBoxButtons.YesNo);
                 if (d.ToString() == "Yes")
                 {
                     DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
                     BLLProduto bll = new BLLProduto(cx);
                     bll.Excluir(Convert.ToInt32(txtCodigo.Text));
                     this.LimpaTela();
-                    this.alteraBotoes(1);
+                    this.AlteraBotoes(1);
                 }
             }
             catch
             {
                 MessageBox.Show("Impossível excluir o registro. \n O registro esta sendo utilizado em outro local.");
-                this.alteraBotoes(3);
+                this.AlteraBotoes(3);
             }
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
-            this.alteraBotoes(1);
+            this.AlteraBotoes(1);
             this.LimpaTela();
         }
 
@@ -350,7 +350,7 @@ namespace GUI
 
         private void btaddCategoria_Click(object sender, EventArgs e)
         {
-            frmCadastroCategoria f = new frmCadastroCategoria();
+            CadastroCategoria f = new CadastroCategoria();
             f.ShowDialog();
             f.Dispose();
 

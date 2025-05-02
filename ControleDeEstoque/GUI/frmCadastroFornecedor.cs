@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmCadastroFornecedor : GUI.frmModeloDeFormularioDeCadastro
+    public partial class frmCadastroFornecedor : GUI.ModeloDeFormularioDeCadastro
     {
         public frmCadastroFornecedor()
         {
@@ -112,7 +112,7 @@ namespace GUI
         private void btInserir_Click(object sender, EventArgs e)
         {
             this.operacao = "inserir";
-            this.alteraBotoes(2);
+            this.AlteraBotoes(2);
         }
 
         private void btLocalizar_Click(object sender, EventArgs e)
@@ -140,12 +140,12 @@ namespace GUI
                 txtFone.Text = modelo.ForFone;
                 txtCelular.Text = modelo.ForCelular;
 
-                alteraBotoes(3);
+                AlteraBotoes(3);
             }
             else
             {
                 this.LimpaTela();
-                this.alteraBotoes(1);
+                this.AlteraBotoes(1);
             }
             f.Dispose();
 
@@ -154,27 +154,27 @@ namespace GUI
         private void btAlterar_Click(object sender, EventArgs e)
         {
             this.operacao = "alterar";
-            this.alteraBotoes(2);
+            this.AlteraBotoes(2);
         }
 
         private void btExcluir_Click(object sender, EventArgs e)
         {
             try
             {
-                DialogResult d = MessageBox.Show("Deseja excluir o registro?", "Aviso", MessageBoxButtons.YesNo);
+                DialogResult d = MessageBox.Show(UIConstants.ExcluirConfirmacao, "Aviso", MessageBoxButtons.YesNo);
                 if (d.ToString() == "Yes")
                 {
                     DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
                     BLLFornecedor bll = new BLLFornecedor(cx);
                     bll.Excluir(Convert.ToInt32(txtCodigo.Text));
                     this.LimpaTela();
-                    this.alteraBotoes(1);
+                    this.AlteraBotoes(1);
                 }
             }
             catch
             {
                 MessageBox.Show("Impossível excluir o registro. \n O registro esta sendo utilizado em outro local.");
-                this.alteraBotoes(3);
+                this.AlteraBotoes(3);
             }
         }
 
@@ -212,10 +212,10 @@ namespace GUI
                     //alterar uma categoria
                     modelo.ForCod = Convert.ToInt32(txtCodigo.Text);
                     bll.Alterar(modelo);
-                    MessageBox.Show("Cadastro alterado");
+                    MessageBox.Show(UIConstants.CadastroAlterado);
                 }
                 this.LimpaTela();
-                this.alteraBotoes(1);
+                this.AlteraBotoes(1);
             }
             catch (Exception erro)
             {
@@ -225,7 +225,7 @@ namespace GUI
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
-            this.alteraBotoes(1);
+            this.AlteraBotoes(1);
             this.LimpaTela();
         }
 

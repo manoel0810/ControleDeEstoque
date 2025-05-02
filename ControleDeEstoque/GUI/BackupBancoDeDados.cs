@@ -5,19 +5,22 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmBackupBancoDeDados : Form
+    public partial class BackupBancoDeDados : Form
     {
-        public frmBackupBancoDeDados()
+        public BackupBancoDeDados()
         {
             InitializeComponent();
         }
 
-        private void btBackup_Click(object sender, EventArgs e)
+        private void Backup_Click(object sender, EventArgs e)
         {
             try
             {
-                SaveFileDialog d = new SaveFileDialog();
-                d.Filter = "Backup Files|*.bak";
+                SaveFileDialog d = new SaveFileDialog
+                {
+                    Filter = "Backup Files|*.bak"
+                };
+
                 d.ShowDialog();
                 if (d.FileName != "")
                 {
@@ -25,6 +28,7 @@ namespace GUI
                     String localBackup = d.FileName;
                     String conexao = @"Data Source=" + DadosDaConexao.servidor + ";Initial Catalog=master;User=" +
                         DadosDaConexao.usuario + ";Password=" + DadosDaConexao.senha;
+
                     SQLServerBackup.BackupDataBase(conexao, nomeBanco, d.FileName);
                     MessageBox.Show("Backup realizado com sucesso!!!!");
                 }
@@ -35,12 +39,15 @@ namespace GUI
             }
         }
 
-        private void btRestaurar_Click(object sender, EventArgs e)
+        private void Restaurar_Click(object sender, EventArgs e)
         {
             try
             {
-                OpenFileDialog d = new OpenFileDialog();
-                d.Filter = "Backup Files|*.bak";
+                OpenFileDialog d = new OpenFileDialog
+                {
+                    Filter = "Backup Files|*.bak"
+                };
+
                 d.ShowDialog();
                 if (d.FileName != "")
                 {
@@ -48,6 +55,7 @@ namespace GUI
                     String localBackup = d.FileName;
                     String conexao = @"Data Source=" + DadosDaConexao.servidor + ";Initial Catalog=master;User=" +
                         DadosDaConexao.usuario + ";Password=" + DadosDaConexao.senha;
+
                     SQLServerBackup.RestauraDatabase(conexao, nomeBanco, d.FileName);
                     MessageBox.Show("Backup restaurado com sucesso!!!!");
                 }

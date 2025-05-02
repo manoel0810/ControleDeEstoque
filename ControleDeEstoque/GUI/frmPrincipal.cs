@@ -15,7 +15,7 @@ namespace GUI
 
         private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadastroCategoria f = new frmCadastroCategoria();
+            CadastroCategoria f = new CadastroCategoria();
             f.ShowDialog();
             f.Dispose();
         }
@@ -108,7 +108,7 @@ namespace GUI
 
         private void backupDoBancoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBackupBancoDeDados f = new frmBackupBancoDeDados();
+            BackupBancoDeDados f = new BackupBancoDeDados();
             f.ShowDialog();
             f.Dispose();
         }

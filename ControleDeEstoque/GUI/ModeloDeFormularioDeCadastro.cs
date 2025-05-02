@@ -3,14 +3,16 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmModeloDeFormularioDeCadastro : Form
+    public partial class ModeloDeFormularioDeCadastro : Form
     {
         public String operacao;
-        public frmModeloDeFormularioDeCadastro()
+
+        public ModeloDeFormularioDeCadastro()
         {
             InitializeComponent();
         }
-        public void alteraBotoes(int op)
+
+        public void AlteraBotoes(int op)
         {
             // op = operaçoes que serao feitas com os botoes
             // 1  = Preparar os botoes para inserir e localizar
@@ -46,7 +48,7 @@ namespace GUI
 
         private void frmModeloDeFormularioDeCadastro_Load(object sender, EventArgs e)
         {
-            this.alteraBotoes(1);
+            this.AlteraBotoes(1);
         }
 
         private void frmModeloDeFormularioDeCadastro_KeyDown(object sender, KeyEventArgs e)

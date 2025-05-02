@@ -459,7 +459,7 @@ namespace GUI
                         mparcelas.PcoDataVecto = Convert.ToDateTime(dgvParcelas.Rows[i].Cells[2].Value);
                         bparcelas.Incluir(mparcelas);
                     }
-                    MessageBox.Show("Cadastro alterado");
+                    MessageBox.Show(UIConstants.CadastroAlterado);
                 }
                 this.LimpaTela();
                 pnFinalizaCompra.Visible = false;

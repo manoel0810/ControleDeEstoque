@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmCadastroTipoPagamento : GUI.frmModeloDeFormularioDeCadastro
+    public partial class frmCadastroTipoPagamento : GUI.ModeloDeFormularioDeCadastro
     {
         public frmCadastroTipoPagamento()
         {
@@ -15,12 +15,12 @@ namespace GUI
 
         private void frmCadastroTipoPagamento_Load(object sender, EventArgs e)
         {
-            this.alteraBotoes(1);
+            this.AlteraBotoes(1);
         }
 
         private void btInserir_Click(object sender, EventArgs e)
         {
-            this.alteraBotoes(2);
+            this.AlteraBotoes(2);
             this.operacao = "inserir";
         }
 
@@ -36,12 +36,12 @@ namespace GUI
                 ModeloTipoPagamento modelo = bll.CarregaModeloTipoPagamento(f.codigo);
                 txtCodigo.Text = modelo.TpaCod.ToString();
                 txtNome.Text = modelo.TpaNome;
-                alteraBotoes(3);
+                AlteraBotoes(3);
             }
             else
             {
                 this.LimpaTela();
-                this.alteraBotoes(1);
+                this.AlteraBotoes(1);
             }
             f.Dispose();
 
@@ -50,7 +50,7 @@ namespace GUI
         private void btAlterar_Click(object sender, EventArgs e)
         {
             this.operacao = "alterar";
-            this.alteraBotoes(2);
+            this.AlteraBotoes(2);
         }
         public void LimpaTela()
         {
@@ -61,21 +61,21 @@ namespace GUI
         {
             try
             {
-                DialogResult d = MessageBox.Show("Deseja excluir o registro?", "Aviso", MessageBoxButtons.YesNo);
+                DialogResult d = MessageBox.Show(UIConstants.ExcluirConfirmacao, "Aviso", MessageBoxButtons.YesNo);
                 if (d.ToString() == "Yes")
                 {
                     DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
                     BLLTipoPagamento bll = new BLLTipoPagamento(cx);
                     bll.Excluir(Convert.ToInt32(txtCodigo.Text));
                     this.LimpaTela();
-                    this.alteraBotoes(1);
+                    this.AlteraBotoes(1);
                 }
             }
             catch (Exception erro)
             {
                 //MessageBox.Show(erro.Message);
                 MessageBox.Show("Impossível excluir o registro. \n O registro esta sendo utilizado em outro local.");
-                this.alteraBotoes(3);
+                this.AlteraBotoes(3);
             }
         }
 
@@ -101,10 +101,10 @@ namespace GUI
                     //alterar uma categoria
                     modelo.TpaCod = Convert.ToInt32(txtCodigo.Text);
                     bll.Alterar(modelo);
-                    MessageBox.Show("Cadastro alterado");
+                    MessageBox.Show(UIConstants.CadastroAlterado);
                 }
                 this.LimpaTela();
-                this.alteraBotoes(1);
+                this.AlteraBotoes(1);
             }
             catch (Exception erro)
             {
@@ -115,7 +115,7 @@ namespace GUI
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.LimpaTela();
-            this.alteraBotoes(1);
+            this.AlteraBotoes(1);
         }
     }
 }

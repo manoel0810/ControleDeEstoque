@@ -68,3 +68,16 @@ D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.csproj.
 D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.csproj.Up2Date
 D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.dll
 D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.pdb
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\BLL.dll
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\BLL.pdb
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\DAL.dll
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Ferramentas.dll
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Modelo.dll
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\DAL.pdb
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Ferramentas.pdb
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\bin\Debug\Modelo.pdb
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.dll
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\BBL\obj\Debug\BLL.pdb

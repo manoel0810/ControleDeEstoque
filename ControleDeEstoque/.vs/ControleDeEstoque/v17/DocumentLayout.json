@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B5B5284A-6556-4555-B16D-C04DE89863BC}|MaterialDosAssinantes\\MaterialDosAssinantes.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\materialdosassinantes\\frmbackupbancodedados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B5B5284A-6556-4555-B16D-C04DE89863BC}|MaterialDosAssinantes\\MaterialDosAssinantes.csproj|solutionrelative:materialdosassinantes\\frmbackupbancodedados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\gui\\cadastrocategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|solutionrelative:gui\\cadastrocategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5B5284A-6556-4555-B16D-C04DE89863BC}|MaterialDosAssinantes\\MaterialDosAssinantes.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\materialdosassinantes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5B5284A-6556-4555-B16D-C04DE89863BC}|MaterialDosAssinantes\\MaterialDosAssinantes.csproj|solutionrelative:materialdosassinantes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\gui\\uiconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|solutionrelative:gui\\uiconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\gui\\cadastrocategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|solutionrelative:gui\\cadastrocategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 325,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UIConstants.cs",
+              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\UIConstants.cs",
+              "RelativeDocumentMoniker": "GUI\\UIConstants.cs",
+              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\UIConstants.cs",
+              "RelativeToolTip": "GUI\\UIConstants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T23:37:06.346Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -31,27 +48,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FrmBackupBancoDeDados.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\MaterialDosAssinantes\\FrmBackupBancoDeDados.cs",
-              "RelativeDocumentMoniker": "MaterialDosAssinantes\\FrmBackupBancoDeDados.cs",
-              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\MaterialDosAssinantes\\FrmBackupBancoDeDados.cs [Design]",
-              "RelativeToolTip": "MaterialDosAssinantes\\FrmBackupBancoDeDados.cs [Design]",
+              "Title": "CadastroCategoria.cs",
+              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\CadastroCategoria.cs",
+              "RelativeDocumentMoniker": "GUI\\CadastroCategoria.cs",
+              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\CadastroCategoria.cs",
+              "RelativeToolTip": "GUI\\CadastroCategoria.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAswGIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T23:14:02.488Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-02T23:36:13.597Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\MaterialDosAssinantes\\Program.cs",
-              "RelativeDocumentMoniker": "MaterialDosAssinantes\\Program.cs",
-              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\MaterialDosAssinantes\\Program.cs",
-              "RelativeToolTip": "MaterialDosAssinantes\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CadastroCategoria.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\CadastroCategoria.cs",
+              "RelativeDocumentMoniker": "GUI\\CadastroCategoria.cs",
+              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\CadastroCategoria.cs [Design]",
+              "RelativeToolTip": "GUI\\CadastroCategoria.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T23:13:57.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T23:26:46.796Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },
