@@ -70,18 +70,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 30);
+            this.label1.Location = new System.Drawing.Point(12, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
+            this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 84);
+            this.label2.Location = new System.Drawing.Point(12, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 16);
+            this.label2.Size = new System.Drawing.Size(146, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome da Categoria";
             // 
@@ -89,27 +89,30 @@
             // 
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(14, 50);
+            this.txtCodigo.Location = new System.Drawing.Point(16, 62);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(112, 26);
             this.txtCodigo.TabIndex = 2;
             // 
             // txtNome
             // 
             this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNome.Location = new System.Drawing.Point(14, 104);
+            this.txtNome.Location = new System.Drawing.Point(16, 130);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(730, 22);
+            this.txtNome.Size = new System.Drawing.Size(821, 26);
             this.txtNome.TabIndex = 3;
             // 
-            // frmCadastroCategoria
+            // CadastroCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(782, 553);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.ClientSize = new System.Drawing.Size(880, 691);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCadastroCategoria";
+            this.Name = "CadastroCategoria";
             this.Text = "Cadastro de categoria";
             this.Load += new System.EventHandler(this.CadastroCategoria_Load);
             this.pnDados.ResumeLayout(false);
