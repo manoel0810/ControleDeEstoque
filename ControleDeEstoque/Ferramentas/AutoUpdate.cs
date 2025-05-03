@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
-using System.Runtime.Serialization.Json;
-using System.Text;
+using System.Reflection;
 using System.Threading;
 
 namespace Ferramentas
@@ -45,19 +45,27 @@ namespace Ferramentas
                 string updaterExe = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Updater.exe");
 
                 if (!File.Exists(updaterExe))
+                    throw new FileNotFoundException("Updater.exe não encontrado.");
+
+                string paramFile = Path.Combine(Path.GetTempPath(), "update_params.json");
+
+                var dados = new
                 {
-                    Erro?.Invoke("O arquivo 'Updater.exe' não foi encontrado.");
-                    return;
-                }
+                    ZipPath = _downloadedZipPath,
+                    Destino = AppDomain.CurrentDomain.BaseDirectory,
+                    Executavel = Assembly.GetEntryAssembly().Location
+                };
 
-                string zipPath = Path.GetFullPath(_downloadedZipPath);
-                string appPath = System.Reflection.Assembly.GetEntryAssembly().Location;
-                string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+                File.WriteAllText(paramFile, JsonConvert.SerializeObject(dados)); // usando Newtonsoft.Json
 
-                string args = $"\"{zipPath}\" \"{baseDir}\" \"{appPath}\"";
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = updaterExe,
+                    Arguments = $"\"{paramFile}\"",
+                    UseShellExecute = false
+                });
 
-                Process.Start(updaterExe, args);
-                Environment.Exit(0); // Encerra o app atual para permitir atualização
+                Environment.Exit(0);
             }
             catch (Exception ex)
             {
@@ -105,11 +113,7 @@ namespace Ferramentas
             using (var client = new WebClient())
             {
                 string json = client.DownloadString(_sourceUrl);
-                using (var ms = new MemoryStream(Encoding.UTF8.GetBytes(json)))
-                {
-                    var serializer = new DataContractJsonSerializer(typeof(AutoUpdateConfig));
-                    return (AutoUpdateConfig)serializer.ReadObject(ms);
-                }
+                return JsonConvert.DeserializeObject<AutoUpdateConfig>(json);
             }
         }
 
