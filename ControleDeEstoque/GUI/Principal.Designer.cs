@@ -329,6 +329,7 @@
             this.backupDoBancoDeDadosToolStripMenuItem.Name = "backupDoBancoDeDadosToolStripMenuItem";
             this.backupDoBancoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(380, 34);
             this.backupDoBancoDeDadosToolStripMenuItem.Text = "Backup do banco de Dados";
+            this.backupDoBancoDeDadosToolStripMenuItem.Visible = false;
             this.backupDoBancoDeDadosToolStripMenuItem.Click += new System.EventHandler(this.BackupDoBancoDeDadosToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
