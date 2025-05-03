@@ -27,7 +27,7 @@ namespace GUI
         private void AutoUpdateRuntime()
         {
             string versaoAtual = Assembly.GetEntryAssembly().GetName().Version.ToString();
-            var updater = new AutoUpdate(versaoAtual, "https://seusite.com/update.json");
+            var updater = new AutoUpdate(versaoAtual, "https://raw.githubusercontent.com/manoel0810/ControleDeEstoque/refs/heads/master/ControleDeEstoque/Ferramentas/Update.json");
 
             updater.AtualizacaoDisponivel += (versao, changelog) =>
             {

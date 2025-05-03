@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
@@ -8,18 +9,24 @@ namespace Updater
 {
     internal class Program
     {
-        // Updater.exe (projeto separado)
+        private const string _versionFile = "update_version.txt";
+        private const string _downloadedZipPath = "update.zip";
+        private const string _pendingFlag = "update_pending.flag";
+
         static void Main(string[] args)
         {
-            if (args.Length < 3)
+            if (args.Length == 0 || !File.Exists(args[0]))
             {
-                Console.WriteLine("Uso: Updater.exe <path_zip> <path_destino> <app_para_reiniciar>");
+                Console.WriteLine("Arquivo de parâmetros não encontrado.");
                 return;
             }
 
-            string zipPath = args[0];
-            string destinationPath = args[1];
-            string appToStart = args[2];
+            string json = File.ReadAllText(args[0]);
+            var parametros = JsonConvert.DeserializeObject<ParametrosUpdate>(json);
+
+            string zipPath = parametros.ZipPath;
+            string destinationPath = parametros.Destino;
+            string appToStart = parametros.Executavel;
 
             Thread.Sleep(2000); // Aguarda app fechar
 
@@ -39,13 +46,26 @@ namespace Updater
                 }
 
                 Directory.Delete("temp_update", true);
+                File.Delete(_downloadedZipPath);
+                File.Delete(_versionFile);
+                File.Delete(_pendingFlag);
+
                 File.Delete(zipPath);
                 Process.Start(appToStart);
+                Environment.Exit(0);
             }
             catch (Exception ex)
             {
-                File.WriteAllText("update_error.log", ex.ToString());
+                string dados = $"Erro ao aplicar atualização: {ex.Message}\nARGS: {string.Join("\n", args)}";
+                File.WriteAllText("update_error.log", dados);
             }
+        }
+
+        class ParametrosUpdate
+        {
+            public string ZipPath { get; set; }
+            public string Destino { get; set; }
+            public string Executavel { get; set; }
         }
 
     }
