@@ -66,7 +66,9 @@
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.explorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blocoDeNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MainAppBackImage = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MainAppBackImage)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -81,7 +83,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(880, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1238, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -355,11 +357,23 @@
             this.blocoDeNotasToolStripMenuItem.Text = "Bloco de notas";
             this.blocoDeNotasToolStripMenuItem.Click += new System.EventHandler(this.BlocoDeNotasToolStripMenuItem_Click);
             // 
+            // MainAppBackImage
+            // 
+            this.MainAppBackImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainAppBackImage.Image = ((System.Drawing.Image)(resources.GetObject("MainAppBackImage.Image")));
+            this.MainAppBackImage.Location = new System.Drawing.Point(0, 33);
+            this.MainAppBackImage.Name = "MainAppBackImage";
+            this.MainAppBackImage.Size = new System.Drawing.Size(1238, 661);
+            this.MainAppBackImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MainAppBackImage.TabIndex = 1;
+            this.MainAppBackImage.TabStop = false;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 691);
+            this.ClientSize = new System.Drawing.Size(1238, 694);
+            this.Controls.Add(this.MainAppBackImage);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -370,6 +384,7 @@
             this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MainAppBackImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,5 +429,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem pagamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recebimentoToolStripMenuItem;
+        private System.Windows.Forms.PictureBox MainAppBackImage;
     }
 }
