@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmCadastrounidadeDeMedida
+    partial class CadastrounidadeDeMedida
     {
         /// <summary>
         /// Required designer variable.
@@ -45,34 +45,34 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            this.btCancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // btSalvar
             // 
-            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
+            this.btSalvar.Click += new System.EventHandler(this.Salvar_Click);
             // 
             // btExcluir
             // 
-            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
+            this.btExcluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
             // btAlterar
             // 
-            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
+            this.btAlterar.Click += new System.EventHandler(this.Alterar_Click);
             // 
             // btLocalizar
             // 
-            this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click);
+            this.btLocalizar.Click += new System.EventHandler(this.Localizar_Click);
             // 
             // btInserir
             // 
-            this.btInserir.Click += new System.EventHandler(this.btInserir_Click);
+            this.btInserir.Click += new System.EventHandler(this.Inserir_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
@@ -81,12 +81,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(11, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 17);
+            this.label2.Size = new System.Drawing.Size(127, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Unidade de medida";
             // 
             // txtCod
             // 
+            this.txtCod.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCod.Enabled = false;
             this.txtCod.Location = new System.Drawing.Point(14, 49);
             this.txtCod.Name = "txtCod";
@@ -95,17 +96,21 @@
             // 
             // txtUnidadeMedida
             // 
+            this.txtUnidadeMedida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUnidadeMedida.Location = new System.Drawing.Point(14, 114);
             this.txtUnidadeMedida.Name = "txtUnidadeMedida";
             this.txtUnidadeMedida.Size = new System.Drawing.Size(723, 22);
             this.txtUnidadeMedida.TabIndex = 3;
-            this.txtUnidadeMedida.Leave += new System.EventHandler(this.txtUnidadeMedida_Leave);
+            this.txtUnidadeMedida.Leave += new System.EventHandler(this.UnidadeMedida_Leave);
             // 
-            // frmCadastrounidadeDeMedida
+            // CadastrounidadeDeMedida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Name = "frmCadastrounidadeDeMedida";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "CadastrounidadeDeMedida";
             this.Text = "Cadastro Unidade de Medida";
             this.pnDados.ResumeLayout(false);
             this.pnDados.PerformLayout();

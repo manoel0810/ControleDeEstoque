@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmCadastroSubCategoria
+    partial class CadastroSubCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -51,34 +51,34 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            this.btCancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // btSalvar
             // 
-            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
+            this.btSalvar.Click += new System.EventHandler(this.Salvar_Click);
             // 
             // btExcluir
             // 
-            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
+            this.btExcluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
             // btAlterar
             // 
-            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
+            this.btAlterar.Click += new System.EventHandler(this.Alterar_Click);
             // 
             // btLocalizar
             // 
-            this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click);
+            this.btLocalizar.Click += new System.EventHandler(this.Localizar_Click);
             // 
             // btInserir
             // 
-            this.btInserir.Click += new System.EventHandler(this.btInserir_Click);
+            this.btInserir.Click += new System.EventHandler(this.Inserir_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
@@ -87,7 +87,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(20, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 17);
+            this.label2.Size = new System.Drawing.Size(149, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome da SubCategoria";
             // 
@@ -106,12 +106,13 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(20, 158);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 17);
+            this.label3.Size = new System.Drawing.Size(125, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nome da Categoria";
             // 
             // txtScatCod
             // 
+            this.txtScatCod.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtScatCod.Enabled = false;
             this.txtScatCod.Location = new System.Drawing.Point(23, 45);
             this.txtScatCod.Name = "txtScatCod";
@@ -120,6 +121,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Location = new System.Drawing.Point(23, 110);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(710, 22);
@@ -133,15 +135,18 @@
             this.btAdd.TabIndex = 6;
             this.btAdd.Text = "+";
             this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
+            this.btAdd.Click += new System.EventHandler(this.Add_Click);
             // 
-            // frmCadastroSubCategoria
+            // CadastroSubCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Name = "frmCadastroSubCategoria";
-            this.Text = "Cadastro de SubCategoria";
-            this.Load += new System.EventHandler(this.frmCadastroSubCategoria_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "CadastroSubCategoria";
+            this.Text = "Cadastro de Sub Categoria";
+            this.Load += new System.EventHandler(this.CadastroSubCategoria_Load);
             this.pnDados.ResumeLayout(false);
             this.pnDados.PerformLayout();
             this.pnBotoes.ResumeLayout(false);

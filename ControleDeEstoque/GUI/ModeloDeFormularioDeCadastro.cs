@@ -6,6 +6,8 @@ namespace GUI
     public partial class ModeloDeFormularioDeCadastro : Form
     {
         public String operacao;
+        protected const string _alterar = "alterar";
+        protected const string _inserir = "inserir";
 
         public ModeloDeFormularioDeCadastro()
         {

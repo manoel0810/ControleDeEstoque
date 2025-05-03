@@ -377,7 +377,7 @@ namespace GUI
 
         private void btaddSubCategoria_Click(object sender, EventArgs e)
         {
-            frmCadastroSubCategoria f = new frmCadastroSubCategoria();
+            CadastroSubCategoria f = new CadastroSubCategoria();
             f.ShowDialog();
             f.Dispose();
 
@@ -400,7 +400,7 @@ namespace GUI
 
         private void btAddUnidadeMedida_Click(object sender, EventArgs e)
         {
-            frmCadastrounidadeDeMedida f = new frmCadastrounidadeDeMedida();
+            CadastrounidadeDeMedida f = new CadastrounidadeDeMedida();
             f.ShowDialog();
             f.Dispose();
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);

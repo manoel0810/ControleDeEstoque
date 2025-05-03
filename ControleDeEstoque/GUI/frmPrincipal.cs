@@ -22,35 +22,35 @@ namespace GUI
 
         private void categoriaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmConsultaCategoria f = new frmConsultaCategoria();
+            ConsultaCategoria f = new ConsultaCategoria();
             f.ShowDialog();
             f.Dispose();
         }
 
         private void subCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadastroSubCategoria f = new frmCadastroSubCategoria();
+            CadastroSubCategoria f = new CadastroSubCategoria();
             f.ShowDialog();
             f.Dispose();
         }
 
         private void subCategoriaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmConsultaSubCategoria f = new frmConsultaSubCategoria();
+            ConsultaSubCategoria f = new ConsultaSubCategoria();
             f.ShowDialog();
             f.Dispose();
         }
 
         private void unidadeDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadastrounidadeDeMedida f = new frmCadastrounidadeDeMedida();
+            CadastrounidadeDeMedida f = new CadastrounidadeDeMedida();
             f.ShowDialog();
             f.Dispose();
         }
 
         private void unidadeDeMedidaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmConsultaUnidadeDeMedida f = new frmConsultaUnidadeDeMedida();
+            ConsultaUnidadeDeMedida f = new ConsultaUnidadeDeMedida();
             f.ShowDialog();
             f.Dispose();
         }
@@ -130,7 +130,7 @@ namespace GUI
 
         private void tipoDePagamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadastroTipoPagamento f = new frmCadastroTipoPagamento();
+            CadastroTipoPagamento f = new CadastroTipoPagamento();
             f.ShowDialog();
             f.Dispose();
         }
@@ -165,7 +165,7 @@ namespace GUI
 
         private void tipoDePagamentoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmConsultaTipoPagamento f = new frmConsultaTipoPagamento();
+            ConsultaTipoPagamento f = new ConsultaTipoPagamento();
             f.ShowDialog();
             f.Dispose();
         }

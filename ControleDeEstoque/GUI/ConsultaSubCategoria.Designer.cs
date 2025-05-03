@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmConsultaSubCategoria
+    partial class ConsultaSubCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -43,11 +43,12 @@
             this.dgvDados.Location = new System.Drawing.Point(20, 98);
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.ReadOnly = true;
+            this.dgvDados.RowHeadersWidth = 51;
             this.dgvDados.RowTemplate.Height = 24;
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(746, 428);
             this.dgvDados.TabIndex = 7;
-            this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
+            this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dados_CellDoubleClick);
             // 
             // btLocalizar
             // 
@@ -57,10 +58,11 @@
             this.btLocalizar.TabIndex = 6;
             this.btLocalizar.Text = "Localizar";
             this.btLocalizar.UseVisualStyleBackColor = true;
-            this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click);
+            this.btLocalizar.Click += new System.EventHandler(this.Localizar_Click);
             // 
             // txtValor
             // 
+            this.txtValor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtValor.Location = new System.Drawing.Point(20, 40);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(612, 22);
@@ -71,11 +73,11 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(17, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.Size = new System.Drawing.Size(90, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "SubCategoria";
             // 
-            // frmConsultaSubCategoria
+            // ConsultaSubCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,10 +86,13 @@
             this.Controls.Add(this.btLocalizar);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label1);
-            this.Name = "frmConsultaSubCategoria";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consulta SubCategoria";
-            this.Load += new System.EventHandler(this.frmConsultaSubCategoria_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "ConsultaSubCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Consulta Sub Categoria";
+            this.Load += new System.EventHandler(this.ConsultaSubCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
