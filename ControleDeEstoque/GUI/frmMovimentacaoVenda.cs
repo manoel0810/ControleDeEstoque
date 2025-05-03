@@ -328,7 +328,7 @@ namespace GUI
 
         private void btLocalizar_Click(object sender, EventArgs e)
         {
-            frmConsultaVenda f = new frmConsultaVenda();
+            ConsultaVenda f = new ConsultaVenda();
             f.ShowDialog();
             if (f.codigo != 0)
             {

@@ -71,7 +71,7 @@ namespace GUI
 
         private void configuraçãoDoBancoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConfiguracaoBancoDados f = new frmConfiguracaoBancoDados();
+            ConfiguracaoBancoDados f = new ConfiguracaoBancoDados();
             f.ShowDialog();
             f.Dispose();
         }
@@ -82,6 +82,7 @@ namespace GUI
             try
             {
                 StreamReader arquivo = new StreamReader("ConfiguracaoBanco.txt");
+                DadosDaConexao.autenticacaoWindows = Convert.ToBoolean(arquivo.ReadLine());
                 DadosDaConexao.servidor = arquivo.ReadLine();
                 DadosDaConexao.banco = arquivo.ReadLine();
                 DadosDaConexao.usuario = arquivo.ReadLine();
@@ -190,7 +191,7 @@ namespace GUI
 
         private void compraToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmConsultaCompra f = new frmConsultaCompra();
+            ConsultaCompra f = new ConsultaCompra();
             f.ShowDialog();
             f.Dispose();
         }
@@ -211,7 +212,7 @@ namespace GUI
 
         private void vendaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmConsultaVenda f = new frmConsultaVenda();
+            ConsultaVenda f = new ConsultaVenda();
             f.ShowDialog();
             f.Dispose();
         }

@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmConsultaVenda
+    partial class ConsultaVenda
     {
         /// <summary>
         /// Required designer variable.
@@ -94,12 +94,13 @@
             this.dgvDados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.ReadOnly = true;
+            this.dgvDados.RowHeadersWidth = 51;
             this.dgvDados.RowTemplate.Height = 24;
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(735, 379);
             this.dgvDados.TabIndex = 12;
-            this.dgvDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellClick);
-            this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
+            this.dgvDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dados_CellClick);
+            this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dados_CellDoubleClick);
             // 
             // tpItens
             // 
@@ -121,6 +122,7 @@
             this.dgvItens.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvItens.Name = "dgvItens";
             this.dgvItens.ReadOnly = true;
+            this.dgvItens.RowHeadersWidth = 51;
             this.dgvItens.RowTemplate.Height = 24;
             this.dgvItens.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvItens.Size = new System.Drawing.Size(735, 379);
@@ -146,6 +148,7 @@
             this.dgvParcelas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvParcelas.Name = "dgvParcelas";
             this.dgvParcelas.ReadOnly = true;
+            this.dgvParcelas.RowHeadersWidth = 51;
             this.dgvParcelas.RowTemplate.Height = 24;
             this.dgvParcelas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvParcelas.Size = new System.Drawing.Size(735, 379);
@@ -168,7 +171,7 @@
             this.lbCliNome.AutoSize = true;
             this.lbCliNome.Location = new System.Drawing.Point(164, 5);
             this.lbCliNome.Name = "lbCliNome";
-            this.lbCliNome.Size = new System.Drawing.Size(114, 17);
+            this.lbCliNome.Size = new System.Drawing.Size(108, 16);
             this.lbCliNome.TabIndex = 3;
             this.lbCliNome.Text = "Nome do cliente:";
             // 
@@ -180,7 +183,7 @@
             this.btLocCliente.TabIndex = 2;
             this.btLocCliente.Text = "Localizar Cliente";
             this.btLocCliente.UseVisualStyleBackColor = true;
-            this.btLocCliente.Click += new System.EventHandler(this.btLocCliente_Click);
+            this.btLocCliente.Click += new System.EventHandler(this.LocCliente_Click);
             // 
             // txtCliCod
             // 
@@ -195,7 +198,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 17);
+            this.label1.Size = new System.Drawing.Size(112, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código do cliente";
             // 
@@ -217,7 +220,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(236, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Data Final";
             // 
@@ -243,14 +246,14 @@
             this.btLocData.TabIndex = 2;
             this.btLocData.Text = "Localizar";
             this.btLocData.UseVisualStyleBackColor = true;
-            this.btLocData.Click += new System.EventHandler(this.btLocData_Click);
+            this.btLocData.Click += new System.EventHandler(this.LocData_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 17);
+            this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Data Inicial";
             // 
@@ -276,12 +279,12 @@
             this.rbGeral.Location = new System.Drawing.Point(16, 19);
             this.rbGeral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbGeral.Name = "rbGeral";
-            this.rbGeral.Size = new System.Drawing.Size(138, 21);
+            this.rbGeral.Size = new System.Drawing.Size(134, 20);
             this.rbGeral.TabIndex = 3;
             this.rbGeral.TabStop = true;
             this.rbGeral.Text = "Todas as vendas";
             this.rbGeral.UseVisualStyleBackColor = true;
-            this.rbGeral.CheckedChanged += new System.EventHandler(this.rbGeral_CheckedChanged);
+            this.rbGeral.CheckedChanged += new System.EventHandler(this.Geral_CheckedChanged);
             // 
             // rbParcelas
             // 
@@ -289,11 +292,11 @@
             this.rbParcelas.Location = new System.Drawing.Point(568, 19);
             this.rbParcelas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbParcelas.Name = "rbParcelas";
-            this.rbParcelas.Size = new System.Drawing.Size(152, 21);
+            this.rbParcelas.Size = new System.Drawing.Size(146, 20);
             this.rbParcelas.TabIndex = 2;
             this.rbParcelas.Text = "Parcelas em aberto";
             this.rbParcelas.UseVisualStyleBackColor = true;
-            this.rbParcelas.CheckedChanged += new System.EventHandler(this.rbGeral_CheckedChanged);
+            this.rbParcelas.CheckedChanged += new System.EventHandler(this.Geral_CheckedChanged);
             // 
             // rbData
             // 
@@ -301,11 +304,11 @@
             this.rbData.Location = new System.Drawing.Point(380, 19);
             this.rbData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbData.Name = "rbData";
-            this.rbData.Size = new System.Drawing.Size(122, 21);
+            this.rbData.Size = new System.Drawing.Size(117, 20);
             this.rbData.TabIndex = 1;
             this.rbData.Text = "Data da venda";
             this.rbData.UseVisualStyleBackColor = true;
-            this.rbData.CheckedChanged += new System.EventHandler(this.rbGeral_CheckedChanged);
+            this.rbData.CheckedChanged += new System.EventHandler(this.Geral_CheckedChanged);
             // 
             // rbCliente
             // 
@@ -313,13 +316,13 @@
             this.rbCliente.Location = new System.Drawing.Point(220, 19);
             this.rbCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbCliente.Name = "rbCliente";
-            this.rbCliente.Size = new System.Drawing.Size(72, 21);
+            this.rbCliente.Size = new System.Drawing.Size(69, 20);
             this.rbCliente.TabIndex = 0;
             this.rbCliente.Text = "Cliente";
             this.rbCliente.UseVisualStyleBackColor = true;
-            this.rbCliente.CheckedChanged += new System.EventHandler(this.rbGeral_CheckedChanged);
+            this.rbCliente.CheckedChanged += new System.EventHandler(this.Geral_CheckedChanged);
             // 
-            // frmConsultaVenda
+            // ConsultaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -328,10 +331,13 @@
             this.Controls.Add(this.pData);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pCliente);
-            this.Name = "frmConsultaVenda";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "ConsultaVenda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Consulta de vendas";
-            this.Load += new System.EventHandler(this.frmConsultaVenda_Load);
+            this.Load += new System.EventHandler(this.ConsultaVenda_Load);
             this.tbcDados.ResumeLayout(false);
             this.tpVenda.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();

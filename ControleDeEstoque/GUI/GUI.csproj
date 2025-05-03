@@ -104,11 +104,11 @@
     <Compile Include="CadastrounidadeDeMedida.Designer.cs">
       <DependentUpon>CadastrounidadeDeMedida.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConfiguracaoBancoDados.cs">
+    <Compile Include="ConfiguracaoBancoDados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConfiguracaoBancoDados.Designer.cs">
-      <DependentUpon>frmConfiguracaoBancoDados.cs</DependentUpon>
+    <Compile Include="ConfiguracaoBancoDados.Designer.cs">
+      <DependentUpon>ConfiguracaoBancoDados.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaCategoria.cs">
       <SubType>Form</SubType>
@@ -122,11 +122,11 @@
     <Compile Include="ConsultaCliente.Designer.cs">
       <DependentUpon>ConsultaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaCompra.cs">
+    <Compile Include="ConsultaCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaCompra.Designer.cs">
-      <DependentUpon>frmConsultaCompra.cs</DependentUpon>
+    <Compile Include="ConsultaCompra.Designer.cs">
+      <DependentUpon>ConsultaCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaFornecedor.cs">
       <SubType>Form</SubType>
@@ -158,11 +158,11 @@
     <Compile Include="ConsultaUnidadeDeMedida.Designer.cs">
       <DependentUpon>ConsultaUnidadeDeMedida.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaVenda.cs">
+    <Compile Include="ConsultaVenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaVenda.Designer.cs">
-      <DependentUpon>frmConsultaVenda.cs</DependentUpon>
+    <Compile Include="ConsultaVenda.Designer.cs">
+      <DependentUpon>ConsultaVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="ModeloDeFormularioDeCadastro.cs">
       <SubType>Form</SubType>
@@ -233,8 +233,8 @@
     <EmbeddedResource Include="CadastrounidadeDeMedida.resx">
       <DependentUpon>CadastrounidadeDeMedida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConfiguracaoBancoDados.resx">
-      <DependentUpon>frmConfiguracaoBancoDados.cs</DependentUpon>
+    <EmbeddedResource Include="ConfiguracaoBancoDados.resx">
+      <DependentUpon>ConfiguracaoBancoDados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaCategoria.resx">
       <DependentUpon>ConsultaCategoria.cs</DependentUpon>
@@ -242,8 +242,8 @@
     <EmbeddedResource Include="ConsultaCliente.resx">
       <DependentUpon>ConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaCompra.resx">
-      <DependentUpon>frmConsultaCompra.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaCompra.resx">
+      <DependentUpon>ConsultaCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaFornecedor.resx">
       <DependentUpon>ConsultaFornecedor.cs</DependentUpon>
@@ -260,8 +260,8 @@
     <EmbeddedResource Include="ConsultaUnidadeDeMedida.resx">
       <DependentUpon>ConsultaUnidadeDeMedida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaVenda.resx">
-      <DependentUpon>frmConsultaVenda.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaVenda.resx">
+      <DependentUpon>ConsultaVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModeloDeFormularioDeCadastro.resx">
       <DependentUpon>ModeloDeFormularioDeCadastro.cs</DependentUpon>

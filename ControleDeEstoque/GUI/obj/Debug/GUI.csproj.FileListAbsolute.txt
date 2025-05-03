@@ -226,9 +226,6 @@ C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoq
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.BackupBancoDeDados.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.CadastroCategoria.resources
-C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.frmConfiguracaoBancoDados.resources
-C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.frmConsultaCompra.resources
-C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.frmConsultaVenda.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.ModeloDeFormularioDeCadastro.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.frmMovimentacaoCompra.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.frmMovimentacaoVenda.resources
@@ -255,3 +252,6 @@ C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoq
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.ConsultaCliente.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.CadastroFornecedor.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.ConsultaFornecedor.resources
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.ConfiguracaoBancoDados.resources
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.ConsultaCompra.resources
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.ConsultaVenda.resources

@@ -6,13 +6,14 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmConsultaVenda : Form
+    public partial class ConsultaVenda : Form
     {
         public int codigo = 0;
-        public frmConsultaVenda()
+        public ConsultaVenda()
         {
             InitializeComponent();
         }
+
         public void AtualizaCabecalhoDGVenda()
         {
             //dgvDados.Columns[1].Width = 700;
@@ -34,85 +35,90 @@ namespace GUI
             dgvDados.Columns[4].Width = 300;
 
         }
-        private void rbGeral_CheckedChanged(object sender, EventArgs e)
+
+        private void Geral_CheckedChanged(object sender, EventArgs e)
         {
             //ocultar paineis
             pCliente.Visible = false;
             pData.Visible = false;
+
             //limpar os grids
             dgvDados.DataSource = null;
             dgvItens.DataSource = null;
             dgvParcelas.DataSource = null;
-            if (rbGeral.Checked == true)
+
+            if (rbGeral.Checked)
             {
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
                 BLLVenda bllvenda = new BLLVenda(cx);
                 dgvDados.DataSource = bllvenda.Localizar();
-                this.AtualizaCabecalhoDGVenda();
+                AtualizaCabecalhoDGVenda();
             }
-            if (rbData.Checked == true)
-            {
-                pData.Visible = true;
-            }
-            if (rbCliente.Checked == true)
-            {
-                pCliente.Visible = true;
-            }
-            if (rbParcelas.Checked == true)
+
+            pData.Visible = rbData.Checked;
+            pCliente.Visible = rbCliente.Checked;
+
+            if (rbParcelas.Checked)
             {
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
                 BLLVenda bllvenda = new BLLVenda(cx);
+
                 dgvDados.DataSource = bllvenda.LocalizarPorParcelasEmAberto();
-                this.AtualizaCabecalhoDGVenda();
+                AtualizaCabecalhoDGVenda();
             }
         }
 
-        private void frmConsultaVenda_Load(object sender, EventArgs e)
+        private void ConsultaVenda_Load(object sender, EventArgs e)
         {
-            rbGeral_CheckedChanged(sender, e);
+            Geral_CheckedChanged(sender, e);
         }
 
-        private void btLocCliente_Click(object sender, EventArgs e)
+        private void LocCliente_Click(object sender, EventArgs e)
         {
-            ConsultaCliente f = new ConsultaCliente();
-            f.ShowDialog();
-            if (f.codigo != 0)
+            using (var f = new ConsultaCliente())
             {
-                txtCliCod.Text = f.codigo.ToString();
-                DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
-                BLLCliente bll = new BLLCliente(cx);
-                ModeloCliente modelo = bll.CarregaModeloCliente(f.codigo);
-                lbCliNome.Text = "Nome do cliente: " + modelo.CliNome;
-                BLLVenda bllvenda = new BLLVenda(cx);
-                dgvDados.DataSource = bllvenda.Localizar(f.codigo);
-                f.Dispose();
-                this.AtualizaCabecalhoDGVenda();
-            }
-            else
-            {
-                txtCliCod.Text = ""; lbCliNome.Text = "Nome do Cliente:";
+                f.ShowDialog();
+                if (f.codigo != 0)
+                {
+#pragma warning disable CS1690
+                    txtCliCod.Text = f.codigo.ToString();
+#pragma warning restore CS1690
+                    DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
+                    BLLCliente bll = new BLLCliente(cx);
+                    ModeloCliente modelo = bll.CarregaModeloCliente(f.codigo);
+                    lbCliNome.Text = "Nome do cliente: " + modelo.CliNome;
+                    BLLVenda bllvenda = new BLLVenda(cx);
+                    dgvDados.DataSource = bllvenda.Localizar(f.codigo);
+                    AtualizaCabecalhoDGVenda();
+                }
+                else
+                {
+                    txtCliCod.Text = ""; lbCliNome.Text = "Nome do Cliente:";
+                }
             }
         }
 
-        private void btLocData_Click(object sender, EventArgs e)
+        private void LocData_Click(object sender, EventArgs e)
         {
             DateTime dtini = dateTimePicker1.Value;
             DateTime dtfim = dateTimePicker2.Value;
+
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
             BLLVenda bllvenda = new BLLVenda(cx);
             dgvDados.DataSource = bllvenda.Localizar(dtini, dtfim);
-            this.AtualizaCabecalhoDGVenda();
+            AtualizaCabecalhoDGVenda();
         }
 
-        private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void Dados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                this.codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
-                this.Close();
+                codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
+                Close();
             }
         }
-        public void alteraCabecalhoItensParcelas()
+
+        public void AlteraCabecalhoItensParcelas()
         {
             try
             {
@@ -130,18 +136,21 @@ namespace GUI
             }
             catch { }
         }
-        private void dgvDados_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void Dados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
+
                 //itens da compra
                 BLLItensVenda bllItens = new BLLItensVenda(cx);
                 dgvItens.DataSource = bllItens.Localizar(Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value));
+
                 //parcelas da compra
                 BLLParcelasVenda bllParcelas = new BLLParcelasVenda(cx);
                 dgvParcelas.DataSource = bllParcelas.Localizar(Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value));
-                alteraCabecalhoItensParcelas();
+                AlteraCabecalhoItensParcelas();
             }
         }
     }

@@ -69,7 +69,7 @@ namespace GUI
 
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            frmConsultaCompra f = new frmConsultaCompra();
+            ConsultaCompra f = new ConsultaCompra();
             f.ShowDialog();
             if (f.codigo != 0)
             {

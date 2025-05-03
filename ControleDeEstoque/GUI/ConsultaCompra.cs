@@ -6,25 +6,19 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmConsultaCompra : Form
+    public partial class ConsultaCompra : Form
     {
         public int codigo = 0;
-        public frmConsultaCompra()
+        public ConsultaCompra()
         {
             InitializeComponent();
         }
 
-        private void frmConsultaCompra_Load(object sender, EventArgs e)
+        private void ConsultaCompra_Load(object sender, EventArgs e)
         {
-            rbGeral_CheckedChanged(sender, e);
+            Geral_CheckedChanged(sender, e);
         }
-        public void ExecutaConsulta(int op)
-        {
-            //op = 1 todas as compras
-            //op = 2 por fornecedor
-            //op = 3 data da compra
-            //op = 4 parcelas em aberto
-        }
+
         public void AtualizaCabecalhoDGCompra()
         {
             //dgvDados.Columns[1].Width = 700;
@@ -44,71 +38,76 @@ namespace GUI
             dgvDados.Columns[4].Width = 300;
 
         }
-        private void btLocFornecedor_Click(object sender, EventArgs e)
+
+        private void LocFornecedor_Click(object sender, EventArgs e)
         {
-            ConsultaFornecedor f = new ConsultaFornecedor();
-            f.ShowDialog();
-            if (f.codigo != 0)
+            using (ConsultaFornecedor f = new ConsultaFornecedor())
             {
-                txtForCod.Text = f.codigo.ToString();
-                DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
-                BLLFornecedor bll = new BLLFornecedor(cx);
-                ModeloFornecedor modelo = bll.CarregaModeloFornecedor(f.codigo);
-                lbForNome.Text = "Nome do fornecedor: " + modelo.ForNome;
-                BLLCompra bllcompra = new BLLCompra(cx);
-                dgvDados.DataSource = bllcompra.Localizar(f.codigo);
-                f.Dispose();
-                this.AtualizaCabecalhoDGCompra();
-            }
-            else
-            {
-                txtForCod.Text = ""; lbForNome.Text = "Nome do fornecedor:";
+                f.ShowDialog();
+                if (f.codigo != 0)
+                {
+#pragma warning disable CS1690 // Possível referência nula de argumento.
+                    txtForCod.Text = f.codigo.ToString();
+#pragma warning restore CS1690 // Possível referência nula de argumento.
+                    DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
+                    BLLFornecedor bll = new BLLFornecedor(cx);
+                    ModeloFornecedor modelo = bll.CarregaModeloFornecedor(f.codigo);
+                    lbForNome.Text = "Nome do fornecedor: " + modelo.ForNome;
+                    BLLCompra bllcompra = new BLLCompra(cx);
+                    dgvDados.DataSource = bllcompra.Localizar(f.codigo);
+                    AtualizaCabecalhoDGCompra();
+                }
+                else
+                {
+                    txtForCod.Text = ""; lbForNome.Text = "Nome do fornecedor:";
+                }
             }
         }
 
-        private void rbGeral_CheckedChanged(object sender, EventArgs e)
+        private void Geral_CheckedChanged(object sender, EventArgs e)
         {
             //ocultar paineis
             pFornecedor.Visible = false;
             pData.Visible = false;
+
             //limpar os grids
             dgvDados.DataSource = null;
             dgvItens.DataSource = null;
             dgvParcelas.DataSource = null;
-            if (rbGeral.Checked == true)
+
+            if (rbGeral.Checked)
             {
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
                 BLLCompra bllcompra = new BLLCompra(cx);
                 dgvDados.DataSource = bllcompra.Localizar();
-                this.AtualizaCabecalhoDGCompra();
+                AtualizaCabecalhoDGCompra();
             }
-            if (rbData.Checked == true)
-            {
-                pData.Visible = true;
-            }
-            if (rbFornecedor.Checked == true)
-            {
-                pFornecedor.Visible = true;
-            }
+
+            pData.Visible = rbData.Checked;
+            pFornecedor.Visible = rbFornecedor.Checked;
+
             if (rbParcelas.Checked == true)
             {
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
                 BLLCompra bllcompra = new BLLCompra(cx);
+
                 dgvDados.DataSource = bllcompra.LocalizarPorParcelasEmAberto();
-                this.AtualizaCabecalhoDGCompra();
+                AtualizaCabecalhoDGCompra();
             }
         }
 
-        private void btLocData_Click(object sender, EventArgs e)
+        private void LocData_Click(object sender, EventArgs e)
         {
             DateTime dtini = dateTimePicker1.Value;
             DateTime dtfim = dateTimePicker2.Value;
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
             BLLCompra bllcompra = new BLLCompra(cx);
+
             dgvDados.DataSource = bllcompra.Localizar(dtini, dtfim);
-            this.AtualizaCabecalhoDGCompra();
+            AtualizaCabecalhoDGCompra();
         }
-        public void alteraCabecalhoItensParcelas()
+
+        public void AlteraCabecalhoItensParcelas()
         {
             try
             {
@@ -126,27 +125,30 @@ namespace GUI
             }
             catch { }
         }
-        private void dgvDados_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void Dados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
+
                 //itens da compra
                 BLLItensCompra bllItens = new BLLItensCompra(cx);
                 dgvItens.DataSource = bllItens.Localizar(Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value));
+
                 //parcelas da compra
                 BLLParcelasCompra bllParcelas = new BLLParcelasCompra(cx);
                 dgvParcelas.DataSource = bllParcelas.Localizar(Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value));
-                alteraCabecalhoItensParcelas();
+                AlteraCabecalhoItensParcelas();
             }
         }
 
-        private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void Dados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                this.codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
-                this.Close();
+                codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
+                Close();
             }
         }
     }

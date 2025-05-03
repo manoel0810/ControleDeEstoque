@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmConsultaCompra
+    partial class ConsultaCompra
     {
         /// <summary>
         /// Required designer variable.
@@ -85,12 +85,12 @@
             this.rbGeral.Location = new System.Drawing.Point(16, 19);
             this.rbGeral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbGeral.Name = "rbGeral";
-            this.rbGeral.Size = new System.Drawing.Size(146, 21);
+            this.rbGeral.Size = new System.Drawing.Size(142, 20);
             this.rbGeral.TabIndex = 3;
             this.rbGeral.TabStop = true;
             this.rbGeral.Text = "Todas as compras";
             this.rbGeral.UseVisualStyleBackColor = true;
-            this.rbGeral.CheckedChanged += new System.EventHandler(this.rbGeral_CheckedChanged);
+            this.rbGeral.CheckedChanged += new System.EventHandler(this.Geral_CheckedChanged);
             // 
             // rbParcelas
             // 
@@ -98,11 +98,11 @@
             this.rbParcelas.Location = new System.Drawing.Point(568, 19);
             this.rbParcelas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbParcelas.Name = "rbParcelas";
-            this.rbParcelas.Size = new System.Drawing.Size(152, 21);
+            this.rbParcelas.Size = new System.Drawing.Size(146, 20);
             this.rbParcelas.TabIndex = 2;
             this.rbParcelas.Text = "Parcelas em aberto";
             this.rbParcelas.UseVisualStyleBackColor = true;
-            this.rbParcelas.CheckedChanged += new System.EventHandler(this.rbGeral_CheckedChanged);
+            this.rbParcelas.CheckedChanged += new System.EventHandler(this.Geral_CheckedChanged);
             // 
             // rbData
             // 
@@ -110,11 +110,11 @@
             this.rbData.Location = new System.Drawing.Point(380, 19);
             this.rbData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbData.Name = "rbData";
-            this.rbData.Size = new System.Drawing.Size(130, 21);
+            this.rbData.Size = new System.Drawing.Size(125, 20);
             this.rbData.TabIndex = 1;
             this.rbData.Text = "Data da compra";
             this.rbData.UseVisualStyleBackColor = true;
-            this.rbData.CheckedChanged += new System.EventHandler(this.rbGeral_CheckedChanged);
+            this.rbData.CheckedChanged += new System.EventHandler(this.Geral_CheckedChanged);
             // 
             // rbFornecedor
             // 
@@ -122,11 +122,11 @@
             this.rbFornecedor.Location = new System.Drawing.Point(220, 19);
             this.rbFornecedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbFornecedor.Name = "rbFornecedor";
-            this.rbFornecedor.Size = new System.Drawing.Size(102, 21);
+            this.rbFornecedor.Size = new System.Drawing.Size(98, 20);
             this.rbFornecedor.TabIndex = 0;
             this.rbFornecedor.Text = "Fornecedor";
             this.rbFornecedor.UseVisualStyleBackColor = true;
-            this.rbFornecedor.CheckedChanged += new System.EventHandler(this.rbGeral_CheckedChanged);
+            this.rbFornecedor.CheckedChanged += new System.EventHandler(this.Geral_CheckedChanged);
             // 
             // dgvDados
             // 
@@ -137,12 +137,13 @@
             this.dgvDados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.ReadOnly = true;
+            this.dgvDados.RowHeadersWidth = 51;
             this.dgvDados.RowTemplate.Height = 24;
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(735, 379);
             this.dgvDados.TabIndex = 12;
-            this.dgvDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellClick);
-            this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
+            this.dgvDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dados_CellClick);
+            this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dados_CellDoubleClick);
             // 
             // pFornecedor
             // 
@@ -161,7 +162,7 @@
             this.lbForNome.AutoSize = true;
             this.lbForNome.Location = new System.Drawing.Point(164, 5);
             this.lbForNome.Name = "lbForNome";
-            this.lbForNome.Size = new System.Drawing.Size(146, 17);
+            this.lbForNome.Size = new System.Drawing.Size(139, 16);
             this.lbForNome.TabIndex = 3;
             this.lbForNome.Text = "Nome do Fornecedor:";
             // 
@@ -173,10 +174,11 @@
             this.btLocFornecedor.TabIndex = 2;
             this.btLocFornecedor.Text = "Localizar Fornecedor";
             this.btLocFornecedor.UseVisualStyleBackColor = true;
-            this.btLocFornecedor.Click += new System.EventHandler(this.btLocFornecedor_Click);
+            this.btLocFornecedor.Click += new System.EventHandler(this.LocFornecedor_Click);
             // 
             // txtForCod
             // 
+            this.txtForCod.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtForCod.Enabled = false;
             this.txtForCod.Location = new System.Drawing.Point(16, 25);
             this.txtForCod.Name = "txtForCod";
@@ -188,7 +190,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 17);
+            this.label1.Size = new System.Drawing.Size(138, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código do fornecedor";
             // 
@@ -210,7 +212,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(236, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Data Final";
             // 
@@ -236,14 +238,14 @@
             this.btLocData.TabIndex = 2;
             this.btLocData.Text = "Localizar";
             this.btLocData.UseVisualStyleBackColor = true;
-            this.btLocData.Click += new System.EventHandler(this.btLocData_Click);
+            this.btLocData.Click += new System.EventHandler(this.LocData_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 17);
+            this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Data Inicial";
             // 
@@ -289,6 +291,7 @@
             this.dgvItens.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvItens.Name = "dgvItens";
             this.dgvItens.ReadOnly = true;
+            this.dgvItens.RowHeadersWidth = 51;
             this.dgvItens.RowTemplate.Height = 24;
             this.dgvItens.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvItens.Size = new System.Drawing.Size(735, 379);
@@ -314,12 +317,13 @@
             this.dgvParcelas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvParcelas.Name = "dgvParcelas";
             this.dgvParcelas.ReadOnly = true;
+            this.dgvParcelas.RowHeadersWidth = 51;
             this.dgvParcelas.RowTemplate.Height = 24;
             this.dgvParcelas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvParcelas.Size = new System.Drawing.Size(735, 379);
             this.dgvParcelas.TabIndex = 13;
             // 
-            // frmConsultaCompra
+            // ConsultaCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -328,10 +332,13 @@
             this.Controls.Add(this.pFornecedor);
             this.Controls.Add(this.pData);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmConsultaCompra";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "ConsultaCompra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Consulta de compras";
-            this.Load += new System.EventHandler(this.frmConsultaCompra_Load);
+            this.Load += new System.EventHandler(this.ConsultaCompra_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();

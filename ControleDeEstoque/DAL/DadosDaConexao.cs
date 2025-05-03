@@ -8,12 +8,15 @@ namespace DAL
         public static String banco = "EstoqueApp";
         public static String usuario = "sa";
         public static String senha = "123456";
+        public static bool autenticacaoWindows = true;
 
         public static String StringDeConexao
         {
             get
             {
-                return $"Server={servidor};Database={banco};Trusted_Connection=True;MultipleActiveResultSets=true";
+                return autenticacaoWindows
+                    ? $"Data Source={servidor};Initial Catalog={banco};Integrated Security=True;Pooling=False"
+                    : $"Data Source={servidor};Initial Catalog={banco};User Id={usuario};Password={senha};Pooling=False";
             }
         }
     }
