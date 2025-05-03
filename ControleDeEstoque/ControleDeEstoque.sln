@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferramentas", "Ferramentas\Ferramentas.csproj", "{4A09CF67-5D5F-4E30-88D8-C6C30304CA4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDosAssinantes", "MaterialDosAssinantes\MaterialDosAssinantes.csproj", "{B5B5284A-6556-4555-B16D-C04DE89863BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Updater", "Updater\Updater.csproj", "{1CCA91EC-FE20-4456-953A-B1956ED94520}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{B5B5284A-6556-4555-B16D-C04DE89863BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5B5284A-6556-4555-B16D-C04DE89863BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5B5284A-6556-4555-B16D-C04DE89863BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CCA91EC-FE20-4456-953A-B1956ED94520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CCA91EC-FE20-4456-953A-B1956ED94520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CCA91EC-FE20-4456-953A-B1956ED94520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CCA91EC-FE20-4456-953A-B1956ED94520}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
