@@ -6,27 +6,28 @@ namespace Modelo
     {
         public ModeloCategoria()
         {
-            this.CatCod = 0;
-            this.CatNome = "";
+            CatCod = 0;
+            CatNome = "";
         }
 
         public ModeloCategoria(int catcod, String nome)
         {
-            this.CatCod = catcod;
-            this.CatNome = nome;
+            CatCod = catcod;
+            CatNome = nome;
         }
 
         private int cat_cod;
         public int CatCod
         {
-            get { return this.cat_cod; }
-            set { this.cat_cod = value; }
+            get { return cat_cod; }
+            set { cat_cod = value; }
         }
+
         private String cat_nome;
         public String CatNome
         {
-            get { return this.cat_nome; }
-            set { this.cat_nome = value; }
+            get { return cat_nome; }
+            set { cat_nome = value; }
         }
     }
 }

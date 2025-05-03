@@ -6,37 +6,37 @@ namespace Modelo
     {
         public ModeloSubCategoria()
         {
-            this.CatCod = 0;
-            this.ScatCod = 0;
-            this.ScatNome = "";
+            CatCod = 0;
+            ScatCod = 0;
+            ScatNome = "";
         }
 
         public ModeloSubCategoria(int scatcod, int catcod, String snome)
         {
-            this.CatCod = catcod;
-            this.ScatCod = scatcod;
-            this.ScatNome = snome;
+            CatCod = catcod;
+            ScatCod = scatcod;
+            ScatNome = snome;
         }
 
         private int scat_cod;
         public int ScatCod
         {
-            get { return this.scat_cod; }
-            set { this.scat_cod = value; }
+            get { return scat_cod; }
+            set { scat_cod = value; }
         }
 
         private int cat_cod;
         public int CatCod
         {
-            get { return this.cat_cod; }
-            set { this.cat_cod = value; }
+            get { return cat_cod; }
+            set { cat_cod = value; }
         }
 
         private String scat_nome;
         public String ScatNome
         {
-            get { return this.scat_nome; }
-            set { this.scat_nome = value; }
+            get { return scat_nome; }
+            set { scat_nome = value; }
         }
 
     }
