@@ -1,7 +1,9 @@
 ﻿using DAL;
+using Ferramentas;
 using System;
 using System.Data.SqlClient;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace GUI
@@ -20,6 +22,40 @@ namespace GUI
                 form.Icon = Icon;
                 form.ShowDialog();
             }
+        }
+
+        private void AutoUpdateRuntime()
+        {
+            string versaoAtual = Assembly.GetEntryAssembly().GetName().Version.ToString();
+            var updater = new AutoUpdate(versaoAtual, "https://seusite.com/update.json");
+
+            updater.AtualizacaoDisponivel += (versao, changelog) =>
+            {
+                if (DialogResult.Yes == MessageBox.Show($"Uma nova versão {versao} está disponível. Deseja instalar agora?", "Atualização", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    updater.AplicarAtualizacaoComAuxiliar();
+                }
+            };
+
+            updater.AtualizacaoJaBaixada += () =>
+            {
+                if (DialogResult.Yes == MessageBox.Show("Uma atualização está pendente. Deseja aplicá-la agora?", "Atualização", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    updater.AplicarAtualizacaoComAuxiliar();
+                }
+            };
+
+            updater.Erro += (mensagem) =>
+            {
+                MessageBox.Show($"Erro ao verificar atualização: {mensagem}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            };
+
+            updater.AtualizacaoAplicada += () =>
+            {
+                Application.Restart();
+            };
+
+            updater.VerificarAtualizacaoEmSegundoPlano();
         }
 
         private void CategoriaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,6 +133,8 @@ namespace GUI
             {
                 MessageBox.Show(erro.Message, UIConstants.Erro, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            AutoUpdateRuntime();
         }
 
         private void BackupDoBancoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
