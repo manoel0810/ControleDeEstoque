@@ -27,11 +27,11 @@ namespace BLL
 
 
             if (modelo.CliTipo == "Física" && Validacao.IsCpf(modelo.CliCpfCnpj) == false)
-                throw new Exception("O CPF inválido");
-            else
+                throw new Exception("O CPF é inválido");
+            else if (modelo.CliTipo == "Jurídica")
             {
                 if (Validacao.IsCnpj(modelo.CliCpfCnpj) == false)
-                    throw new Exception("O CNPJ inválido");
+                    throw new Exception("O CNPJ é inválido");
 
             }
 

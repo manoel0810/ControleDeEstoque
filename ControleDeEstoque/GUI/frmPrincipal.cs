@@ -137,28 +137,28 @@ namespace GUI
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadastroCliente f = new frmCadastroCliente();
+            CadastroCliente f = new CadastroCliente();
             f.ShowDialog();
             f.Dispose();
         }
 
         private void clienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmConsultaCliente f = new frmConsultaCliente();
+            ConsultaCliente f = new ConsultaCliente();
             f.ShowDialog();
             f.Dispose();
         }
 
         private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadastroFornecedor f = new frmCadastroFornecedor();
+            CadastroFornecedor f = new CadastroFornecedor();
             f.ShowDialog();
             f.Dispose();
         }
 
         private void fornecedorToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmConsultaFornecedor f = new frmConsultaFornecedor();
+            ConsultaFornecedor f = new ConsultaFornecedor();
             f.ShowDialog();
             f.Dispose();
         }

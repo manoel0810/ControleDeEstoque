@@ -46,7 +46,7 @@ namespace GUI
         }
         private void btLocFornecedor_Click(object sender, EventArgs e)
         {
-            frmConsultaFornecedor f = new frmConsultaFornecedor();
+            ConsultaFornecedor f = new ConsultaFornecedor();
             f.ShowDialog();
             if (f.codigo != 0)
             {

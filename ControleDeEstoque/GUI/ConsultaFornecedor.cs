@@ -5,31 +5,28 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmConsultaFornecedor : Form
+    public partial class ConsultaFornecedor : Form
     {
         public int codigo = 0;
-        public frmConsultaFornecedor()
+        public ConsultaFornecedor()
         {
             InitializeComponent();
         }
 
-        private void btLocalizar_Click(object sender, EventArgs e)
+        private void Localizar_Click(object sender, EventArgs e)
         {
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
             BLLFornecedor bll = new BLLFornecedor(cx);
-            if (rbNome.Checked == true)
-            {
+
+            if (rbNome.Checked)
                 dgvDados.DataSource = bll.LocalizarPorNome(txtValor.Text);
-            }
             else
-            {
                 dgvDados.DataSource = bll.LocalizarPorCNPJ(txtValor.Text);
-            }
         }
 
-        private void frmConsultaFornecedor_Load(object sender, EventArgs e)
+        private void ConsultaFornecedor_Load(object sender, EventArgs e)
         {
-            btLocalizar_Click(sender, e);
+            Localizar_Click(sender, e);
             dgvDados.Columns[0].HeaderText = "Código";
             //dgvDados.Columns[0].Width = 50;
             dgvDados.Columns[1].HeaderText = "Nome";
@@ -48,12 +45,12 @@ namespace GUI
             dgvDados.Columns[13].HeaderText = "Estado";
         }
 
-        private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void Dados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                this.codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
-                this.Close();
+                codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
+                Close();
             }
         }
     }

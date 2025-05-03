@@ -5,31 +5,28 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmConsultaCliente : Form
+    public partial class ConsultaCliente : Form
     {
         public int codigo = 0;
-        public frmConsultaCliente()
+        public ConsultaCliente()
         {
             InitializeComponent();
         }
 
-        private void btLocalizar_Click(object sender, EventArgs e)
+        private void Localizar_Click(object sender, EventArgs e)
         {
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
             BLLCliente bll = new BLLCliente(cx);
-            if (rbNome.Checked == true)
-            {
+
+            if (rbNome.Checked)
                 dgvDados.DataSource = bll.LocalizarPorNome(txtValor.Text);
-            }
             else
-            {
                 dgvDados.DataSource = bll.LocalizarPorCPFCNPJ(txtValor.Text);
-            }
         }
 
-        private void frmConsultaCliente_Load(object sender, EventArgs e)
+        private void ConsultaCliente_Load(object sender, EventArgs e)
         {
-            btLocalizar_Click(sender, e);
+            Localizar_Click(sender, e);
             dgvDados.Columns[0].HeaderText = "Código";
             //dgvDados.Columns[0].Width = 50;
             dgvDados.Columns[1].HeaderText = "Nome";
@@ -49,12 +46,12 @@ namespace GUI
             dgvDados.Columns[14].HeaderText = "Estado";
         }
 
-        private void dgvDados_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void Dados_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                this.codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
-                this.Close();
+                codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
+                Close();
             }
         }
     }

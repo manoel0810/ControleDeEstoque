@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmConsultaFornecedor
+    partial class ConsultaFornecedor
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,7 @@
             this.rbCPF.Location = new System.Drawing.Point(16, 57);
             this.rbCPF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbCPF.Name = "rbCPF";
-            this.rbCPF.Size = new System.Drawing.Size(64, 21);
+            this.rbCPF.Size = new System.Drawing.Size(63, 20);
             this.rbCPF.TabIndex = 1;
             this.rbCPF.Text = "CNPJ";
             this.rbCPF.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@
             this.rbNome.Location = new System.Drawing.Point(16, 30);
             this.rbNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbNome.Name = "rbNome";
-            this.rbNome.Size = new System.Drawing.Size(66, 21);
+            this.rbNome.Size = new System.Drawing.Size(65, 20);
             this.rbNome.TabIndex = 0;
             this.rbNome.TabStop = true;
             this.rbNome.Text = "Nome";
@@ -85,11 +85,12 @@
             this.dgvDados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.ReadOnly = true;
+            this.dgvDados.RowHeadersWidth = 51;
             this.dgvDados.RowTemplate.Height = 24;
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(747, 412);
             this.dgvDados.TabIndex = 12;
-            this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
+            this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dados_CellDoubleClick);
             // 
             // btLocalizar
             // 
@@ -100,10 +101,11 @@
             this.btLocalizar.TabIndex = 11;
             this.btLocalizar.Text = "Localizar";
             this.btLocalizar.UseVisualStyleBackColor = true;
-            this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click);
+            this.btLocalizar.Click += new System.EventHandler(this.Localizar_Click);
             // 
             // txtValor
             // 
+            this.txtValor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtValor.Location = new System.Drawing.Point(197, 42);
             this.txtValor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtValor.Name = "txtValor";
@@ -115,11 +117,11 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(194, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 17);
+            this.label1.Size = new System.Drawing.Size(39, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "Valor";
             // 
-            // frmConsultaFornecedor
+            // ConsultaFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,10 +131,13 @@
             this.Controls.Add(this.btLocalizar);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label1);
-            this.Name = "frmConsultaFornecedor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "ConsultaFornecedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Consulta Fornecedor";
-            this.Load += new System.EventHandler(this.frmConsultaFornecedor_Load);
+            this.Load += new System.EventHandler(this.ConsultaFornecedor_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();

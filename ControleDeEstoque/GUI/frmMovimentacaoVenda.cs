@@ -27,7 +27,7 @@ namespace GUI
 
         private void btLocCli_Click(object sender, EventArgs e)
         {
-            frmConsultaCliente f = new frmConsultaCliente();
+            ConsultaCliente f = new ConsultaCliente();
             f.ShowDialog();
             if (f.codigo != 0)
             {

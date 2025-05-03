@@ -68,17 +68,17 @@
     <Compile Include="CadastroCategoria.Designer.cs">
       <DependentUpon>CadastroCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroCliente.cs">
+    <Compile Include="CadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroCliente.Designer.cs">
-      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    <Compile Include="CadastroCliente.Designer.cs">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroFornecedor.cs">
+    <Compile Include="CadastroFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroFornecedor.Designer.cs">
-      <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
+    <Compile Include="CadastroFornecedor.Designer.cs">
+      <DependentUpon>CadastroFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastroProduto.cs">
       <SubType>Form</SubType>
@@ -116,11 +116,11 @@
     <Compile Include="ConsultaCategoria.Designer.cs">
       <DependentUpon>ConsultaCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaCliente.cs">
+    <Compile Include="ConsultaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaCliente.Designer.cs">
-      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    <Compile Include="ConsultaCliente.Designer.cs">
+      <DependentUpon>ConsultaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConsultaCompra.cs">
       <SubType>Form</SubType>
@@ -128,11 +128,11 @@
     <Compile Include="frmConsultaCompra.Designer.cs">
       <DependentUpon>frmConsultaCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaFornecedor.cs">
+    <Compile Include="ConsultaFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaFornecedor.Designer.cs">
-      <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
+    <Compile Include="ConsultaFornecedor.Designer.cs">
+      <DependentUpon>ConsultaFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaProduto.cs">
       <SubType>Form</SubType>
@@ -215,11 +215,11 @@
     <EmbeddedResource Include="CadastroCategoria.resx">
       <DependentUpon>CadastroCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroCliente.resx">
-      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroCliente.resx">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroFornecedor.resx">
-      <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroFornecedor.resx">
+      <DependentUpon>CadastroFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroProduto.resx">
       <DependentUpon>CadastroProduto.cs</DependentUpon>
@@ -239,14 +239,14 @@
     <EmbeddedResource Include="ConsultaCategoria.resx">
       <DependentUpon>ConsultaCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaCliente.resx">
-      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaCliente.resx">
+      <DependentUpon>ConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaCompra.resx">
       <DependentUpon>frmConsultaCompra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaFornecedor.resx">
-      <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaFornecedor.resx">
+      <DependentUpon>ConsultaFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaProduto.resx">
       <DependentUpon>ConsultaProduto.cs</DependentUpon>
