@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\gui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|solutionrelative:gui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|solutionrelative:gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|solutionrelative:gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\gui\\configuracaobancodados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|solutionrelative:gui\\configuracaobancodados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 325,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\frmPrincipal.cs",
-              "RelativeDocumentMoniker": "GUI\\frmPrincipal.cs",
-              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\frmPrincipal.cs",
-              "RelativeToolTip": "GUI\\frmPrincipal.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAUwFQAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T01:23:47.551Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -43,16 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\Program.cs",
-              "RelativeDocumentMoniker": "GUI\\Program.cs",
-              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\Program.cs",
-              "RelativeToolTip": "GUI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ConfiguracaoBancoDados.cs",
+              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\ConfiguracaoBancoDados.cs",
+              "RelativeDocumentMoniker": "GUI\\ConfiguracaoBancoDados.cs",
+              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\ConfiguracaoBancoDados.cs",
+              "RelativeToolTip": "GUI\\ConfiguracaoBancoDados.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAA5wEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T01:23:45.586Z",
+              "WhenOpened": "2025-05-03T01:35:14.411Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Principal.cs",
+              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\Principal.cs",
+              "RelativeDocumentMoniker": "GUI\\Principal.cs",
+              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\Principal.cs",
+              "RelativeToolTip": "GUI\\Principal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T01:31:31.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Principal.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\Principal.cs",
+              "RelativeDocumentMoniker": "GUI\\Principal.cs",
+              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\Principal.cs [Design]",
+              "RelativeToolTip": "GUI\\Principal.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T01:30:49.716Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },

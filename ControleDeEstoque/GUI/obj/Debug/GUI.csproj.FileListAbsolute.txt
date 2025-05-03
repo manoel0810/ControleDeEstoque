@@ -230,9 +230,7 @@ C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoq
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.frmMovimentacaoCompra.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.frmMovimentacaoVenda.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.PagamentoCompra.resources
-C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.frmPrincipal.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.RecebimentoVenda.resources
-C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.frmSobre.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.Properties.Resources.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
@@ -255,3 +253,4 @@ C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoq
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.ConfiguracaoBancoDados.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.ConsultaCompra.resources
 C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.ConsultaVenda.resources
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\GUI\obj\Debug\GUI.Principal.resources
