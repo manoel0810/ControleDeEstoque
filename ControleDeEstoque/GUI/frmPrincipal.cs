@@ -57,14 +57,14 @@ namespace GUI
 
         private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadastroProduto f = new frmCadastroProduto();
+            CadastroProduto f = new CadastroProduto();
             f.ShowDialog();
             f.Dispose();
         }
 
         private void produtoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmConsultaProduto f = new frmConsultaProduto();
+            ConsultaProduto f = new ConsultaProduto();
             f.ShowDialog();
             f.Dispose();
         }

@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\gui\\consultatipopagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|solutionrelative:gui\\consultatipopagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\gui\\cadastrotipopagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|solutionrelative:gui\\cadastrotipopagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|c:\\users\\manoel victor\\source\\repos\\manoel0810\\controledeestoque\\controledeestoque\\gui\\cadastrosubcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70C1D43-8E9E-4FA7-9066-5E170D05DF06}|GUI\\GUI.csproj|solutionrelative:gui\\cadastrosubcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 325,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,44 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ConsultaTipoPagamento.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\ConsultaTipoPagamento.cs",
-              "RelativeDocumentMoniker": "GUI\\ConsultaTipoPagamento.cs",
-              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\ConsultaTipoPagamento.cs [Design]",
-              "RelativeToolTip": "GUI\\ConsultaTipoPagamento.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T00:05:27.394Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CadastroTipoPagamento.cs",
-              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\CadastroTipoPagamento.cs",
-              "RelativeDocumentMoniker": "GUI\\CadastroTipoPagamento.cs",
-              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\CadastroTipoPagamento.cs",
-              "RelativeToolTip": "GUI\\CadastroTipoPagamento.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAwwB0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T23:59:18.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CadastroSubCategoria.cs",
-              "DocumentMoniker": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\CadastroSubCategoria.cs",
-              "RelativeDocumentMoniker": "GUI\\CadastroSubCategoria.cs",
-              "ToolTip": "C:\\Users\\Manoel Victor\\source\\repos\\manoel0810\\ControleDeEstoque\\ControleDeEstoque\\GUI\\CadastroSubCategoria.cs",
-              "RelativeToolTip": "GUI\\CadastroSubCategoria.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAswE8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T23:53:21.294Z",
-              "EditorCaption": ""
             }
           ]
         },

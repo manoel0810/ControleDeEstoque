@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmCadastroProduto
+    partial class CadastroProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -90,38 +90,37 @@
             // 
             // pnBotoes
             // 
-            this.pnBotoes.Paint += new System.Windows.Forms.PaintEventHandler(this.pnBotoes_Paint);
             // 
             // btCancelar
             // 
-            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            this.btCancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // btSalvar
             // 
-            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
+            this.btSalvar.Click += new System.EventHandler(this.Salvar_Click);
             // 
             // btExcluir
             // 
-            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
+            this.btExcluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
             // btAlterar
             // 
-            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
+            this.btAlterar.Click += new System.EventHandler(this.Alterar_Click);
             // 
             // btLocalizar
             // 
-            this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click);
+            this.btLocalizar.Click += new System.EventHandler(this.Localizar_Click);
             // 
             // btInserir
             // 
-            this.btInserir.Click += new System.EventHandler(this.btInserir_Click);
+            this.btInserir.Click += new System.EventHandler(this.Inserir_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
@@ -130,12 +129,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(11, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome";
             // 
             // txtCodigo
             // 
+            this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(14, 36);
             this.txtCodigo.Name = "txtCodigo";
@@ -144,6 +144,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Location = new System.Drawing.Point(14, 82);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(359, 22);
@@ -154,12 +155,13 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(11, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 17);
+            this.label3.Size = new System.Drawing.Size(69, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Descrição";
             // 
             // txtDescricao
             // 
+            this.txtDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescricao.Location = new System.Drawing.Point(14, 136);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
@@ -171,7 +173,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(11, 309);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 17);
+            this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Quantidade";
             // 
@@ -180,7 +182,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(14, 259);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 17);
+            this.label5.Size = new System.Drawing.Size(75, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Valor Pago";
             // 
@@ -191,8 +193,8 @@
             this.txtQtde.Size = new System.Drawing.Size(159, 22);
             this.txtQtde.TabIndex = 12;
             this.txtQtde.Text = "0.00";
-            this.txtQtde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQtde_KeyPress);
-            this.txtQtde.Leave += new System.EventHandler(this.txtQtde_Leave);
+            this.txtQtde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Qtde_KeyPress);
+            this.txtQtde.Leave += new System.EventHandler(this.Qtde_Leave);
             // 
             // txtValorPago
             // 
@@ -201,15 +203,15 @@
             this.txtValorPago.Size = new System.Drawing.Size(159, 22);
             this.txtValorPago.TabIndex = 9;
             this.txtValorPago.Text = "0.00";
-            this.txtValorPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorPago_KeyPress);
-            this.txtValorPago.Leave += new System.EventHandler(this.txtValorPago_Leave);
+            this.txtValorPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValorPago_KeyPress);
+            this.txtValorPago.Leave += new System.EventHandler(this.ValorPago_Leave);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(211, 259);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 17);
+            this.label6.Size = new System.Drawing.Size(99, 16);
             this.label6.TabIndex = 10;
             this.label6.Text = "Valor de venda";
             // 
@@ -220,15 +222,15 @@
             this.txtValorVenda.Size = new System.Drawing.Size(159, 22);
             this.txtValorVenda.TabIndex = 11;
             this.txtValorVenda.Text = "0.00";
-            this.txtValorVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorVenda_KeyPress);
-            this.txtValorVenda.Leave += new System.EventHandler(this.txtValorVenda_Leave);
+            this.txtValorVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValorVenda_KeyPress);
+            this.txtValorVenda.Leave += new System.EventHandler(this.ValorVenda_Leave);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(212, 309);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 17);
+            this.label7.Size = new System.Drawing.Size(127, 16);
             this.label7.TabIndex = 12;
             this.label7.Text = "Unidade de medida";
             // 
@@ -237,7 +239,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(11, 356);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 17);
+            this.label8.Size = new System.Drawing.Size(66, 16);
             this.label8.TabIndex = 13;
             this.label8.Text = "Categoria";
             // 
@@ -246,7 +248,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(212, 356);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 17);
+            this.label9.Size = new System.Drawing.Size(90, 16);
             this.label9.TabIndex = 14;
             this.label9.Text = "SubCategoria";
             // 
@@ -269,7 +271,7 @@
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(159, 24);
             this.cbCategoria.TabIndex = 16;
-            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
+            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.Categoria_SelectedIndexChanged);
             // 
             // cbSubCategoria
             // 
@@ -305,7 +307,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(415, 17);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 17);
+            this.label10.Size = new System.Drawing.Size(34, 16);
             this.label10.TabIndex = 19;
             this.label10.Text = "Foto";
             // 
@@ -320,7 +322,7 @@
             this.btLoFoto.Text = "Carregar Foto";
             this.btLoFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btLoFoto.UseVisualStyleBackColor = true;
-            this.btLoFoto.Click += new System.EventHandler(this.btLoFoto_Click);
+            this.btLoFoto.Click += new System.EventHandler(this.LoFoto_Click);
             // 
             // btRmFoto
             // 
@@ -333,7 +335,7 @@
             this.btRmFoto.Text = "Remover Foto";
             this.btRmFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btRmFoto.UseVisualStyleBackColor = true;
-            this.btRmFoto.Click += new System.EventHandler(this.btRmFoto_Click);
+            this.btRmFoto.Click += new System.EventHandler(this.RmFoto_Click);
             // 
             // btaddCategoria
             // 
@@ -343,7 +345,7 @@
             this.btaddCategoria.TabIndex = 22;
             this.btaddCategoria.Text = "+";
             this.btaddCategoria.UseVisualStyleBackColor = true;
-            this.btaddCategoria.Click += new System.EventHandler(this.btaddCategoria_Click);
+            this.btaddCategoria.Click += new System.EventHandler(this.AddCategoria_Click);
             // 
             // btaddSubCategoria
             // 
@@ -353,7 +355,7 @@
             this.btaddSubCategoria.TabIndex = 23;
             this.btaddSubCategoria.Text = "+";
             this.btaddSubCategoria.UseVisualStyleBackColor = true;
-            this.btaddSubCategoria.Click += new System.EventHandler(this.btaddSubCategoria_Click);
+            this.btaddSubCategoria.Click += new System.EventHandler(this.AddSubCategoria_Click);
             // 
             // btAddUnidadeMedida
             // 
@@ -363,15 +365,18 @@
             this.btAddUnidadeMedida.TabIndex = 24;
             this.btAddUnidadeMedida.Text = "+";
             this.btAddUnidadeMedida.UseVisualStyleBackColor = true;
-            this.btAddUnidadeMedida.Click += new System.EventHandler(this.btAddUnidadeMedida_Click);
+            this.btAddUnidadeMedida.Click += new System.EventHandler(this.AddUnidadeMedida_Click);
             // 
-            // frmCadastroProduto
+            // CadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Name = "frmCadastroProduto";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "CadastroProduto";
             this.Text = "Cadastro de produto";
-            this.Load += new System.EventHandler(this.frmCadastroProduto_Load);
+            this.Load += new System.EventHandler(this.CadastroProduto_Load);
             this.pnDados.ResumeLayout(false);
             this.pnDados.PerformLayout();
             this.pnBotoes.ResumeLayout(false);

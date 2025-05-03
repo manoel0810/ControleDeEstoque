@@ -59,7 +59,7 @@ namespace GUI
 
         private void btLocProd_Click(object sender, EventArgs e)
         {
-            frmConsultaProduto f = new frmConsultaProduto();
+            ConsultaProduto f = new ConsultaProduto();
             f.ShowDialog();
             if (f.codigo != 0)
             {

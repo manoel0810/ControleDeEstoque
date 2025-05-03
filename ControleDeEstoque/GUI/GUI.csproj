@@ -80,11 +80,11 @@
     <Compile Include="frmCadastroFornecedor.Designer.cs">
       <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroProduto.cs">
+    <Compile Include="CadastroProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroProduto.Designer.cs">
-      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    <Compile Include="CadastroProduto.Designer.cs">
+      <DependentUpon>CadastroProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastroSubCategoria.cs">
       <SubType>Form</SubType>
@@ -134,11 +134,11 @@
     <Compile Include="frmConsultaFornecedor.Designer.cs">
       <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaProduto.cs">
+    <Compile Include="ConsultaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaProduto.Designer.cs">
-      <DependentUpon>frmConsultaProduto.cs</DependentUpon>
+    <Compile Include="ConsultaProduto.Designer.cs">
+      <DependentUpon>ConsultaProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaSubCategoria.cs">
       <SubType>Form</SubType>
@@ -221,8 +221,8 @@
     <EmbeddedResource Include="frmCadastroFornecedor.resx">
       <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroProduto.resx">
-      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroProduto.resx">
+      <DependentUpon>CadastroProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroSubCategoria.resx">
       <DependentUpon>CadastroSubCategoria.cs</DependentUpon>
@@ -248,8 +248,8 @@
     <EmbeddedResource Include="frmConsultaFornecedor.resx">
       <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaProduto.resx">
-      <DependentUpon>frmConsultaProduto.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaProduto.resx">
+      <DependentUpon>ConsultaProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaSubCategoria.resx">
       <DependentUpon>ConsultaSubCategoria.cs</DependentUpon>
