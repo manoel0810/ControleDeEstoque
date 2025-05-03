@@ -17,7 +17,7 @@ namespace GUI
 
         private void BtLocalizar_Click(object sender, EventArgs e)
         {
-            frmConsultaCompra f = new frmConsultaCompra();
+            ConsultaCompra f = new ConsultaCompra();
             f.ShowDialog();
             btPagar.Enabled = false;
 

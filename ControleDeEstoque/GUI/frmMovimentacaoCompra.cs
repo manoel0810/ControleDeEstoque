@@ -69,7 +69,7 @@ namespace GUI
 
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            frmConsultaCompra f = new frmConsultaCompra();
+            ConsultaCompra f = new ConsultaCompra();
             f.ShowDialog();
             if (f.codigo != 0)
             {
@@ -234,7 +234,7 @@ namespace GUI
         private void btLocFor_Click(object sender, EventArgs e)
         {
 
-            frmConsultaFornecedor f = new frmConsultaFornecedor();
+            ConsultaFornecedor f = new ConsultaFornecedor();
             f.ShowDialog();
             if (f.codigo != 0)
             {
@@ -279,7 +279,7 @@ namespace GUI
 
         private void btLocProd_Click(object sender, EventArgs e)
         {
-            frmConsultaProduto f = new frmConsultaProduto();
+            ConsultaProduto f = new ConsultaProduto();
             f.ShowDialog();
             if (f.codigo != 0)
             {
@@ -459,7 +459,7 @@ namespace GUI
                         mparcelas.PcoDataVecto = Convert.ToDateTime(dgvParcelas.Rows[i].Cells[2].Value);
                         bparcelas.Incluir(mparcelas);
                     }
-                    MessageBox.Show("Cadastro alterado");
+                    MessageBox.Show(UIConstants.CadastroAlterado);
                 }
                 this.LimpaTela();
                 pnFinalizaCompra.Visible = false;

@@ -13,19 +13,22 @@ namespace MaterialDosAssinantes
         {
             InitializeComponent();
         }
+
         private void BtBackup_Click(object sender, EventArgs e)
         {
             try
             {
-                SaveFileDialog d = new SaveFileDialog();
-
-                d.FileName = string.Format("{0}_{1:yyyyMMdd_HHmmss}.bak", TxtDataBase.Text, DateTime.Now);
+                SaveFileDialog d = new SaveFileDialog
+                {
+                    FileName = string.Format("{0}_{1:yyyyMMdd_HHmmss}.bak", TxtDataBase.Text, DateTime.Now)
+                };
                 if (d.FileName != "")
                 {
                     String nomeBanco = TxtDataBase.Text;
                     String localBackup = Convert.ToString(TxtLocalBkp);
                     String conexao = @"Data Source=" + DadosDaConexao.servidor + ";Initial Catalog=master;User=" +
                                      DadosDaConexao.usuario + ";Password=" + DadosDaConexao.senha;
+
                     SQLServerBackup.BackupDataBase(conexao, nomeBanco, d.FileName);
                     MessageBox.Show("Backup realizado com sucesso!!!");
                 }
@@ -40,9 +43,12 @@ namespace MaterialDosAssinantes
         {
             try
             {
-                OpenFileDialog d = new OpenFileDialog();
-                d.Filter = "Backup Files|*.bak";
+                OpenFileDialog d = new OpenFileDialog
+                {
+                    Filter = "Backup Files|*.bak"
+                };
                 d.ShowDialog();
+
                 if (d.FileName != "")
                 {
                     String nomeBanco = DadosDaConexao.banco;
@@ -51,6 +57,7 @@ namespace MaterialDosAssinantes
                                      DadosDaConexao.usuario + ";Password=" + DadosDaConexao.senha;
                     var server = new Microsoft.SqlServer.Management.Smo.Server(TxtLocalBkp.Text);
                     server.KillDatabase(TxtDataBase.Text);
+
                     SQLServerBackup.RestauraDatabase(conexao, nomeBanco, d.FileName);
                     MessageBox.Show("Backup restaurado com sucesso!!!!!");
                 }
@@ -77,16 +84,19 @@ namespace MaterialDosAssinantes
                         var table = new DataTable();
                         table.Load(reader);
                         table.Columns.Add("FriendlyName");
+
                         foreach (DataRow row in table.Rows)
                         {
                             row["FriendlyName"] = System.IO.Path.GetFileName(row["physical_device_name"].ToString());
                         }
+
                         if (CbBackups.DataSource != null && CbBackups.DataSource is DataTable)
                         {
                             var oldTable = ((DataTable)CbBackups.DataSource);
                             CbBackups.DataSource = null;
                             oldTable.Dispose();
                         }
+
                         CbBackups.DataSource = table;
                         CbBackups.DisplayMember = "FriendlyName";
                         CbBackups.ValueMember = "physical_device_name";

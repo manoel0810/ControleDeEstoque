@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmMovimentacaoVenda : GUI.frmModeloDeFormularioDeCadastro
+    public partial class frmMovimentacaoVenda : GUI.ModeloDeFormularioDeCadastro
     {
         public double totalVenda = 0;//Variavel Global
 
@@ -20,14 +20,14 @@ namespace GUI
         {
             this.operacao = "inserir";
             this.totalVenda = 0;
-            alteraBotoes(2);
+            AlteraBotoes(2);
             cbNParcela.SelectedIndex = 0;
             cbxVendaAVista.Checked = false;
         }
 
         private void btLocCli_Click(object sender, EventArgs e)
         {
-            frmConsultaCliente f = new frmConsultaCliente();
+            ConsultaCliente f = new ConsultaCliente();
             f.ShowDialog();
             if (f.codigo != 0)
             {
@@ -59,7 +59,7 @@ namespace GUI
 
         private void btLocProd_Click(object sender, EventArgs e)
         {
-            frmConsultaProduto f = new frmConsultaProduto();
+            ConsultaProduto f = new ConsultaProduto();
             f.ShowDialog();
             if (f.codigo != 0)
             {
@@ -150,7 +150,7 @@ namespace GUI
 
         private void frmMovimentacaoVenda_Load(object sender, EventArgs e)
         {
-            this.alteraBotoes(1);
+            this.AlteraBotoes(1);
             DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
             BLLTipoPagamento bll = new BLLTipoPagamento(cx);
             cbTpagto.DataSource = bll.Localizar("");
@@ -312,7 +312,7 @@ namespace GUI
 
                 //this.LimpaTela();
                 pnFinalizaCompra.Visible = false;
-                this.alteraBotoes(1);
+                this.AlteraBotoes(1);
                 cx.TerminarTransacao();
                 cx.Desconectar();
                 this.LimpaTela();
@@ -328,7 +328,7 @@ namespace GUI
 
         private void btLocalizar_Click(object sender, EventArgs e)
         {
-            frmConsultaVenda f = new frmConsultaVenda();
+            ConsultaVenda f = new ConsultaVenda();
             f.ShowDialog();
             if (f.codigo != 0)
             {
@@ -361,7 +361,7 @@ namespace GUI
                     String[] it = new String[] { icod, inome, iqtd, ivu, TotalLocal.ToString() };
                     this.dgvItens.Rows.Add(it);
                 }
-                alteraBotoes(3);
+                AlteraBotoes(3);
                 lbMsg.Visible = false;
                 if (modelo.VenStatus != "ativa")
                 {
@@ -373,7 +373,7 @@ namespace GUI
             else
             {
                 //this.LimpaTela();
-                this.alteraBotoes(1);
+                this.AlteraBotoes(1);
             }
             f.Dispose();
         }
@@ -381,7 +381,7 @@ namespace GUI
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.LimpaTela();
-            this.alteraBotoes(1);
+            this.AlteraBotoes(1);
         }
 
         public void LimpaTela()

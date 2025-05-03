@@ -41,9 +41,10 @@
             // BtRestauracao
             // 
             this.BtRestauracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtRestauracao.Location = new System.Drawing.Point(9, 164);
+            this.BtRestauracao.Location = new System.Drawing.Point(12, 202);
+            this.BtRestauracao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtRestauracao.Name = "BtRestauracao";
-            this.BtRestauracao.Size = new System.Drawing.Size(535, 30);
+            this.BtRestauracao.Size = new System.Drawing.Size(713, 37);
             this.BtRestauracao.TabIndex = 12;
             this.BtRestauracao.Text = "Restauração";
             this.BtRestauracao.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@
             // BtBackup
             // 
             this.BtBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtBackup.Location = new System.Drawing.Point(9, 125);
+            this.BtBackup.Location = new System.Drawing.Point(12, 154);
+            this.BtBackup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtBackup.Name = "BtBackup";
-            this.BtBackup.Size = new System.Drawing.Size(535, 30);
+            this.BtBackup.Size = new System.Drawing.Size(713, 37);
             this.BtBackup.TabIndex = 11;
             this.BtBackup.Text = "Backup";
             this.BtBackup.UseVisualStyleBackColor = true;
@@ -62,35 +64,39 @@
             // 
             // TxtDataBase
             // 
-            this.TxtDataBase.Location = new System.Drawing.Point(282, 19);
+            this.TxtDataBase.Location = new System.Drawing.Point(376, 23);
+            this.TxtDataBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtDataBase.Name = "TxtDataBase";
-            this.TxtDataBase.Size = new System.Drawing.Size(260, 20);
+            this.TxtDataBase.Size = new System.Drawing.Size(345, 22);
             this.TxtDataBase.TabIndex = 10;
             this.TxtDataBase.Text = "ControleDeEstoque";
             // 
             // TxtLocalBkp
             // 
-            this.TxtLocalBkp.Location = new System.Drawing.Point(9, 19);
+            this.TxtLocalBkp.Location = new System.Drawing.Point(12, 23);
+            this.TxtLocalBkp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtLocalBkp.Name = "TxtLocalBkp";
-            this.TxtLocalBkp.Size = new System.Drawing.Size(260, 20);
+            this.TxtLocalBkp.Size = new System.Drawing.Size(345, 22);
             this.TxtLocalBkp.TabIndex = 9;
             this.TxtLocalBkp.Text = ".\\MSSQLEXPRESS";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(279, 3);
+            this.label2.Location = new System.Drawing.Point(372, 4);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 8;
             this.label2.Text = "DataBase";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 3);
+            this.label1.Location = new System.Drawing.Point(9, 4);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "Servidor";
             // 
@@ -98,9 +104,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 53);
+            this.label3.Location = new System.Drawing.Point(17, 65);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(525, 20);
+            this.label3.Size = new System.Drawing.Size(651, 25);
             this.label3.TabIndex = 16;
             this.label3.Text = "                                                Backups Efetuados                " +
     "                              ";
@@ -113,18 +120,19 @@
             this.CbBackups.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbBackups.FormattingEnabled = true;
             this.CbBackups.IntegralHeight = false;
-            this.CbBackups.ItemHeight = 20;
-            this.CbBackups.Location = new System.Drawing.Point(9, 76);
+            this.CbBackups.ItemHeight = 25;
+            this.CbBackups.Location = new System.Drawing.Point(12, 94);
+            this.CbBackups.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CbBackups.Name = "CbBackups";
-            this.CbBackups.Size = new System.Drawing.Size(535, 28);
+            this.CbBackups.Size = new System.Drawing.Size(712, 33);
             this.CbBackups.TabIndex = 15;
             this.CbBackups.DropDown += new System.EventHandler(this.CbBackups_DropDown_1);
             // 
             // FrmBackupBancoDeDados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 202);
+            this.ClientSize = new System.Drawing.Size(739, 249);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CbBackups);
             this.Controls.Add(this.BtRestauracao);
@@ -133,6 +141,10 @@
             this.Controls.Add(this.TxtLocalBkp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmBackupBancoDeDados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Backup do banco de dados";

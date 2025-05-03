@@ -44,3 +44,12 @@ D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\DAL\obj\Debug\DAL.csproj.
 D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\DAL\obj\Debug\DAL.dll
 D:\repos\git-repos\ControleDeEstoque\ControleDeEstoque\DAL\obj\Debug\DAL.pdb
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\DAL\bin\Debug\DAL.dll
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\DAL\bin\Debug\DAL.pdb
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\DAL\bin\Debug\Modelo.dll
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\DAL\bin\Debug\Modelo.pdb
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\DAL\obj\Debug\DAL.dll
+C:\Users\Manoel Victor\source\repos\manoel0810\ControleDeEstoque\ControleDeEstoque\DAL\obj\Debug\DAL.pdb

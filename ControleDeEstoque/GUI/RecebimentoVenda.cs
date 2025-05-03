@@ -17,7 +17,7 @@ namespace GUI
         private void TBtLocalizar_Click(object sender, EventArgs e)
         {
             btReceber.Enabled = false;
-            frmConsultaVenda f = new frmConsultaVenda();
+            ConsultaVenda f = new ConsultaVenda();
             f.ShowDialog();
 
             if (f.codigo != 0)
