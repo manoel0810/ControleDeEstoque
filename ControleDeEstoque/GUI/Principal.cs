@@ -15,8 +15,11 @@ namespace GUI
 
         private void ShowForm(Form form)
         {
-            form.ShowDialog();
-            form.Dispose();
+            using (form)
+            {
+                form.Icon = Icon;
+                form.ShowDialog();
+            }
         }
 
         private void CategoriaToolStripMenuItem_Click(object sender, EventArgs e)
