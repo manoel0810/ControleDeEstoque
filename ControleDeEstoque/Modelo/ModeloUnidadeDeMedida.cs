@@ -4,19 +4,16 @@ namespace Modelo
 {
     public class ModeloUnidadeDeMedida
     {
-        //umed_cod
-        //umed_nome
-
         public ModeloUnidadeDeMedida()
         {
-            this.UmedCod = 0;
-            this.UmedNome = "";
+            UmedCod = 0;
+            UmedNome = "";
         }
 
         public ModeloUnidadeDeMedida(int cod, String nome)
         {
-            this.UmedCod = cod;
-            this.UmedNome = nome;
+            UmedCod = cod;
+            UmedNome = nome;
         }
 
         private int umed_cod;
@@ -24,18 +21,18 @@ namespace Modelo
         {
             get
             {
-                return this.umed_cod;
+                return umed_cod;
             }
             set
             {
-                this.umed_cod = value;
+                umed_cod = value;
             }
         }
         private String umed_nome;
         public String UmedNome
         {
-            get { return this.umed_nome; }
-            set { this.umed_nome = value; }
+            get { return umed_nome; }
+            set { umed_nome = value; }
         }
     }
 }

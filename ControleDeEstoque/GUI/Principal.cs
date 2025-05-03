@@ -148,7 +148,7 @@ namespace GUI
 
         private void CompraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowForm(new frmMovimentacaoCompra());
+            ShowForm(new MovimentacoesCompra());
         }
 
         private void CompraToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -163,7 +163,7 @@ namespace GUI
 
         private void VendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowForm(new frmMovimentacaoVenda());
+            ShowForm(new MovimentacaoVenda());
         }
 
         private void VendaToolStripMenuItem1_Click(object sender, EventArgs e)

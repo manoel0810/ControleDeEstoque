@@ -7,48 +7,47 @@ namespace Modelo
     {
         public ModeloProduto()
         {
-            this.ProCod = 0;
-            this.ProNome = "";
-            this.ProDescricao = "";
-            //null
-            this.ProValorPago = 0;
-            this.ProValorVenda = 0;
-            this.ProQtde = 0;
-            this.UmedCod = 0;
-            this.CatCod = 0;
-            this.ScatCod = 0;
+            ProCod = 0;
+            ProNome = "";
+            ProDescricao = "";
+            ProValorPago = 0;
+            ProValorVenda = 0;
+            ProQtde = 0;
+            UmedCod = 0;
+            CatCod = 0;
+            ScatCod = 0;
         }
 
         public ModeloProduto(int pro_cod, String pro_nome, String pro_descricao,
             String pro_foto, Double pro_valorpago, Double pro_valorvenda, Double pro_qtde,
             int umed_cod, int cat_cod, int scat_cod)
         {
-            this.ProCod = pro_cod;
-            this.ProNome = pro_nome;
-            this.ProDescricao = pro_descricao;
-            this.CarregaImagem(pro_foto);
-            this.ProValorPago = pro_valorpago;
-            this.ProValorVenda = pro_valorvenda;
-            this.ProQtde = pro_qtde;
-            this.UmedCod = umed_cod;
-            this.CatCod = cat_cod;
-            this.ScatCod = scat_cod;
+            ProCod = pro_cod;
+            ProNome = pro_nome;
+            ProDescricao = pro_descricao;
+            CarregaImagem(pro_foto);
+            ProValorPago = pro_valorpago;
+            ProValorVenda = pro_valorvenda;
+            ProQtde = pro_qtde;
+            UmedCod = umed_cod;
+            CatCod = cat_cod;
+            ScatCod = scat_cod;
         }
 
         public ModeloProduto(int pro_cod, String pro_nome, String pro_descricao,
             Byte[] pro_foto, Double pro_valorpago, Double pro_valorvenda, float pro_qtde,
             int umed_cod, int cat_cod, int scat_cod)
         {
-            this.ProCod = pro_cod;
-            this.ProNome = pro_nome;
-            this.ProDescricao = pro_descricao;
-            this.ProFoto = pro_foto;
-            this.ProValorPago = pro_valorpago;
-            this.ProValorVenda = pro_valorvenda;
-            this.ProQtde = pro_qtde;
-            this.UmedCod = umed_cod;
-            this.CatCod = cat_cod;
-            this.ScatCod = scat_cod;
+            ProCod = pro_cod;
+            ProNome = pro_nome;
+            ProDescricao = pro_descricao;
+            ProFoto = pro_foto;
+            ProValorPago = pro_valorpago;
+            ProValorVenda = pro_valorvenda;
+            ProQtde = pro_qtde;
+            UmedCod = umed_cod;
+            CatCod = cat_cod;
+            ScatCod = scat_cod;
         }
 
         private int _pro_cod;
@@ -56,11 +55,11 @@ namespace Modelo
         {
             get
             {
-                return this._pro_cod;
+                return _pro_cod;
             }
             set
             {
-                this._pro_cod = value;
+                _pro_cod = value;
             }
         }
 
@@ -69,11 +68,11 @@ namespace Modelo
         {
             get
             {
-                return this._pro_nome;
+                return _pro_nome;
             }
             set
             {
-                this._pro_nome = value;
+                _pro_nome = value;
             }
         }
 
@@ -82,19 +81,19 @@ namespace Modelo
         {
             get
             {
-                return this._pro_descricao;
+                return _pro_descricao;
             }
             set
             {
-                this._pro_descricao = value;
+                _pro_descricao = value;
             }
         }
 
         private byte[] _pro_foto;
         public byte[] ProFoto
         {
-            get { return this._pro_foto; }
-            set { this._pro_foto = value; }
+            get { return _pro_foto; }
+            set { _pro_foto = value; }
         }
 
         public void CarregaImagem(String imgCaminho)
@@ -103,16 +102,11 @@ namespace Modelo
             {
                 if (string.IsNullOrEmpty(imgCaminho))
                     return;
-                //fornece propriedadese métodos de instância para criar, copiar,
-                //excluir, mover, e abrir arquivos, e ajuda na criação de objetos FileStream
+
                 FileInfo arqImagem = new FileInfo(imgCaminho);
-                //Expõe um Stream ao redor de um arquivo de suporte
-                //síncrono e assíncrono operações de leitura e gravar.
                 FileStream fs = new FileStream(imgCaminho, FileMode.Open, FileAccess.Read, FileShare.Read);
-                //aloca memória para o vetor
-                this.ProFoto = new byte[Convert.ToInt32(arqImagem.Length)];
-                //Lê um bloco de bytes do fluxo e grava osdados em um buffer fornecido.
-                int iBytesRead = fs.Read(this.ProFoto, 0, Convert.ToInt32(arqImagem.Length));
+                ProFoto = new byte[Convert.ToInt32(arqImagem.Length)];
+                int iBytesRead = fs.Read(ProFoto, 0, Convert.ToInt32(arqImagem.Length));
                 fs.Close();
             }
             catch (Exception ex)
@@ -126,11 +120,11 @@ namespace Modelo
         {
             get
             {
-                return this._pro_valorpago;
+                return _pro_valorpago;
             }
             set
             {
-                this._pro_valorpago = value;
+                _pro_valorpago = value;
             }
         }
 
@@ -139,11 +133,11 @@ namespace Modelo
         {
             get
             {
-                return this._pro_valorvenda;
+                return _pro_valorvenda;
             }
             set
             {
-                this._pro_valorvenda = value;
+                _pro_valorvenda = value;
             }
         }
 
@@ -152,11 +146,11 @@ namespace Modelo
         {
             get
             {
-                return this._pro_qtde;
+                return _pro_qtde;
             }
             set
             {
-                this._pro_qtde = value;
+                _pro_qtde = value;
             }
         }
 
@@ -165,11 +159,11 @@ namespace Modelo
         {
             get
             {
-                return this._umed_cod;
+                return _umed_cod;
             }
             set
             {
-                this._umed_cod = value;
+                _umed_cod = value;
             }
         }
 
@@ -178,11 +172,11 @@ namespace Modelo
         {
             get
             {
-                return this._cat_cod;
+                return _cat_cod;
             }
             set
             {
-                this._cat_cod = value;
+                _cat_cod = value;
             }
         }
 
@@ -191,11 +185,11 @@ namespace Modelo
         {
             get
             {
-                return this._scat_cod;
+                return _scat_cod;
             }
             set
             {
-                this._scat_cod = value;
+                _scat_cod = value;
             }
         }
     }

@@ -6,46 +6,45 @@ namespace Modelo
     {
         public ModeloParcelasCompra()
         {
-            this.PcoCod = 0;
-            this.PcoValor = 0;
-            this.ComCod = 0;
-            //this.PcoDataPagto = DateTime.Now;
-            this.PcoDataVecto = DateTime.Now;
+            PcoCod = 0;
+            PcoValor = 0;
+            ComCod = 0;
+            PcoDataVecto = DateTime.Now;
         }
 
         private int pco_cod;
         public int PcoCod
         {
-            get { return this.pco_cod; }
-            set { this.pco_cod = value; }
+            get { return pco_cod; }
+            set { pco_cod = value; }
         }
 
         private int com_cod;
         public int ComCod
         {
-            get { return this.com_cod; }
-            set { this.com_cod = value; }
+            get { return com_cod; }
+            set { com_cod = value; }
         }
 
         private Double pco_valor;
         public Double PcoValor
         {
-            get { return this.pco_valor; }
-            set { this.pco_valor = value; }
+            get { return pco_valor; }
+            set { pco_valor = value; }
         }
 
         private DateTime pco_datapagto;
         public DateTime PcoDataPagto
         {
-            get { return this.pco_datapagto; }
-            set { this.pco_datapagto = value; }
+            get { return pco_datapagto; }
+            set { pco_datapagto = value; }
         }
 
         private DateTime pco_datavecto;
         public DateTime PcoDataVecto
         {
-            get { return this.pco_datavecto; }
-            set { this.pco_datavecto = value; }
+            get { return pco_datavecto; }
+            set { pco_datavecto = value; }
         }
 
     }

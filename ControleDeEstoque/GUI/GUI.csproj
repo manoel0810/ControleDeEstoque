@@ -170,17 +170,17 @@
     <Compile Include="ModeloDeFormularioDeCadastro.Designer.cs">
       <DependentUpon>ModeloDeFormularioDeCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMovimentacaoCompra.cs">
+    <Compile Include="MovimentacoesCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMovimentacaoCompra.Designer.cs">
-      <DependentUpon>frmMovimentacaoCompra.cs</DependentUpon>
+    <Compile Include="MovimentacoesCompra.Designer.cs">
+      <DependentUpon>MovimentacoesCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMovimentacaoVenda.cs">
+    <Compile Include="MovimentacaoVenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMovimentacaoVenda.Designer.cs">
-      <DependentUpon>frmMovimentacaoVenda.cs</DependentUpon>
+    <Compile Include="MovimentacaoVenda.Designer.cs">
+      <DependentUpon>MovimentacaoVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="PagamentoCompra.cs">
       <SubType>Form</SubType>
@@ -260,11 +260,11 @@
     <EmbeddedResource Include="ModeloDeFormularioDeCadastro.resx">
       <DependentUpon>ModeloDeFormularioDeCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMovimentacaoCompra.resx">
-      <DependentUpon>frmMovimentacaoCompra.cs</DependentUpon>
+    <EmbeddedResource Include="MovimentacoesCompra.resx">
+      <DependentUpon>MovimentacoesCompra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMovimentacaoVenda.resx">
-      <DependentUpon>frmMovimentacaoVenda.cs</DependentUpon>
+    <EmbeddedResource Include="MovimentacaoVenda.resx">
+      <DependentUpon>MovimentacaoVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PagamentoCompra.resx">
       <DependentUpon>PagamentoCompra.cs</DependentUpon>
