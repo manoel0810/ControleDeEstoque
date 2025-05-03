@@ -26,11 +26,12 @@ namespace GUI
         {
             if (valor == CampoT.Telefone)
             {
-                AplicarFormato(txtTexto, 13, new Dictionary<int, string>
+                AplicarFormato(txtTexto, 15, new Dictionary<int, string>
                 {
                     { 0, "(" },
                     { 3, ")" },
-                    { 8, "-" }
+                    { 5, " " },
+                    { 10, "-" }
                 });
             }
         }
